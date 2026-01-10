@@ -1,107 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WorkReady Store | Laptops, Shoes & Boots</title>
-  <meta name="description" content="Affordable refurbished laptops, sports shoes and Timberland boots in South Africa. Order easily via WhatsApp." />
- 
- </body> {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f6f6f6;
-    color: #222;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  header {
-    background: #000;
-    color: #fff;
-    padding: 20px;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f6f6;
+      color: #222;
+    }
 
-  header h1 {
-    margin: 0;
-  }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+    }
 
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-  }
+    header h1 {
+      margin: 0;
+    }
 
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-    padding: 30px 0;
-  }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
 
-  .hero img {
-    width: 100%;
-    border-radius: 10px;
-  }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      padding: 30px 0;
+    }
 
-  .btn {
-    display: inline-block;
-    padding: 14px 20px;
-    background: #25D366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-  }
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-  /* TRUST STRIP */
-  .trust-strip {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    font-weight: bold;
-    margin: 20px 0;
-  }
+    /* TRUST STRIP */
+    .trust-strip {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      font-weight: bold;
+      margin: 20px 0;
+    }
 
-/* STICKY WHATSAPP BUTTON (MOBILE ONLY) */
-@media (max-width: 768px) {
-  .sticky-whatsapp {
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    width: calc(100% - 40px);
-    max-width: 400px;
-    text-align: center;
-  }
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-  .sticky-whatsapp a {
-    display: block;
-    padding: 16px;
-    background: #25D366;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 12px;
-    text-decoration: none;
-  }
-}
-  /* PULSE ANIMATION FOR STICKY WHATSAPP */
-.sticky-whatsapp a {
-  animation: pulse 1.8s infinite;
-}
+      .hero img {
+        margin-top: 20px;
+      }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-</style>
+      .hero-right {
+        display: none;
+      }
+    }
+
+    /* STICKY WHATSAPP */
+    @media (max-width: 768px) {
+      .sticky-whatsapp {
+        position: fixed;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        width: calc(100% - 40px);
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .sticky-whatsapp a {
+        display: block;
+        padding: 16px;
+        background: #25D366;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 12px;
+        text-decoration: none;
+        animation: pulse 1.8s infinite;
+      }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+  </style>
+</head>
 
   <!-- Meta Pixel -->
   <script>
