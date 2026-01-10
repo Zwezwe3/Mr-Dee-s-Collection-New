@@ -5,33 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f6f6f6;
-    color: #222;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f6f6;
+      color: #222;
+    }
 
-  header {
-    background: #000;
-    color: #fff;
-    padding: 20px;
-  }
-
-  /* BUTTON STYLE */
-  .btn {
-    display: inline-block;
-    padding: 15px 26px;
-    background: linear-gradient(135deg, #25D366, #1ebe57);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-  }
-
-</style>
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+    }
 
     header h1 {
       margin: 0;
@@ -43,70 +28,63 @@
       padding: 20px;
     }
 
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 40px;
       align-items: center;
-      padding: 30px 0;
+      padding: 50px 0;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
     }
 
-    .trust-strip {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-weight: bold;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
+    .hero p {
+      font-size: 17px;
+    }
 
-.trust-strip span {
-  background: #fff;
-  padding: 10px 16px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.08);
-}
- .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.08);
-  }
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 15px 26px;
+      background: linear-gradient(135deg, #25D366, #1ebe57);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+    }
 
-  /* CARD HOVER EFFECT */
-  .card {
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
+    /* CARD HOVER */
+    .card {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.15);
-  }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    }
+
     /* MOBILE */
-  @media (max-width: 768px) {
-  .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 50px 0;
-}
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
+      .hero h2 {
+        font-size: 26px;
+      }
 
-.hero p {
-  font-size: 17px;
-}
-    
-
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
     /* STICKY WHATSAPP */
     @media (max-width: 768px) {
       .sticky-whatsapp {
@@ -215,6 +193,23 @@
     <div class="trust-item">💬 WhatsApp Support</div>
     <div class="trust-item">💰 Affordable Prices</div>
   </div>
+  .trust-strip {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.trust-strip span {
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
 Talk to Us on WhatsApp
 <section class="container">
   <h2>Our Products</h2>
