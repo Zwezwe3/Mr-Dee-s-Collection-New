@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-<meta charset="UTF-8">
-<title>WorkReady Store</title>
-
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -19,7 +15,69 @@
     padding: 20px;
   }
 
-  /* PRODUCTS GRID */
+  header h1 {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  .hero img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  /* BUTTON */
+  .btn {
+    display: inline-block;
+    padding: 15px 26px;
+    background: linear-gradient(135deg, #25D366, #1ebe57);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    font-weight: bold;
+  }
+
+  .trust-strip span {
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  }
+
+  /* PRODUCTS */
   .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -32,6 +90,12 @@
     border-radius: 14px;
     box-shadow: 0 6px 18px rgba(0,0,0,.08);
     text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
   }
 
   .card img {
@@ -40,51 +104,28 @@
     margin-bottom: 15px;
   }
 
-</style>
-}
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* HERO */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 50px 0;
-}
-
-/* TRUST STRIP */
-.trust-strip {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 30px 0;
-  font-weight: bold;
-}
-
-.trust-strip span {
-  background: #fff;
-  padding: 10px 16px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.08);
-}
-
-/* STICKY WHATSAPP */
-@media (max-width: 768px) {
-  .sticky-whatsapp {
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
+    .hero img {
+      margin-top: 20px;
+    }
   }
-}
+
+  /* STICKY WHATSAPP */
+  @media (max-width: 768px) {
+    .sticky-whatsapp {
+      position: fixed;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+    }
+  }
 </style>
 </head>
   <!-- Meta Pixel -->
