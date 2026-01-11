@@ -221,6 +221,21 @@
 <footer>
   <p>© 2026 WorkReady Store | WhatsApp Orders Only</p>
 </footer>
+<script>
+function trackWhatsApp(product) {
+  if (typeof fbq === 'function') {
+    fbq('track', 'Contact', {
+      content_name: product,
+      method: 'WhatsApp'
+    });
+  }
 
+  if (typeof ttq === 'object' && typeof ttq.track === 'function') {
+    ttq.track('Contact', {
+      content_name: product
+    });
+  }
+}
+</script>
 </body>
 </html>
