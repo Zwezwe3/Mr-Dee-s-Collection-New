@@ -343,25 +343,26 @@ footer {
   text-align: center;
   grid-column: 1 / -1;
 }
-</style>
-
-<footer>
-  <p>© 2026 WorkReady Store | WhatsApp Orders Only</p>
-</footer>
-<script>
-  function trackWhatsApp(product) {
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Contact', {content_name: product, method: 'WhatsApp'});
-    }
-    if (typeof ttq !== 'undefined') {
-      ttq.track('Contact', {content_name: product});
-    }
-  }
-</script>
   <div class="sticky-whatsapp">
-  <a href="https://wa.me/27628952301?text=Hi%20I%20want%20to%20order%20from%20WorkReady%20Store">
-    💬 Chat on WhatsApp
-  </a>
-</div>
+    <a href="https://wa.me/27628952301?text=Hi%20I%20want%20to%20order%20from%20WorkReady%20Store">
+      💬 Chat on WhatsApp
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2026 WorkReady Store | WhatsApp Orders Only</p>
+  </footer>
+
+  <script>
+    function trackWhatsApp(product) {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact', {content_name: product, method: 'WhatsApp'});
+      }
+      if (typeof ttq !== 'undefined') {
+        ttq.track('Contact', {content_name: product});
+      }
+    }
+  </script>
+
 </body>
 </html>
