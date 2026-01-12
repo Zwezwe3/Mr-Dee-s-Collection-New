@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WorkReady Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -16,21 +16,15 @@
     header {
       background: #000;
       color: #fff;
-      padding: 30px 20px;
       text-align: center;
+      padding: 25px 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
     }
 
-    header p {
-      margin-top: 8px;
-      opacity: 0.9;
-    }
-
-    .trust-badge {
+    .trust {
       background: #111;
       color: #00c853;
       text-align: center;
@@ -38,211 +32,140 @@
       font-weight: bold;
     }
 
-    .container {
+    section {
+      padding: 40px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    /* PRODUCTS */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
 
-    .product-card {
+    .card {
       background: #fff;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
-    }
-
-    .product-card h3 {
-      margin-top: 0;
-    }
-
-    /* IMAGE GALLERY */
-    .gallery {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      margin-bottom: 15px;
-    }
-
-    .gallery img {
-      flex: 0 0 100%;
-      max-width: 100%;
       border-radius: 12px;
-      scroll-snap-align: start;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .gallery::-webkit-scrollbar {
-      display: none;
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 14px 24px;
-      background: #25D366;
+      padding: 10px 18px;
+      background: #25d366;
       color: #fff;
       text-decoration: none;
-      border-radius: 30px;
+      border-radius: 25px;
       font-weight: bold;
     }
 
-    section p, ul {
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-    }
-
     ul {
-      padding-left: 20px;
+      max-width: 400px;
+      margin: auto;
     }
 
     footer {
       background: #000;
       color: #fff;
       text-align: center;
-      padding: 25px;
-      margin-top: 60px;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
     }
 
-    /* STICKY WHATSAPP */
-    .sticky-whatsapp {
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 9999;
-    }
-
-    .sticky-whatsapp a {
-      background: #25D366;
+      background: #25d366;
       color: #fff;
-      padding: 14px 18px;
+      padding: 12px 16px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1794664681252011');
-    fbq('track', 'PageView');
-  </script>
-
 </head>
+
 <body>
-<img src="assets/images/products/laptop1.jpg" style="width:300px">
+
 <header>
   <h1>WorkReady Store</h1>
   <p>Quality tech & footwear — WhatsApp orders only</p>
 </header>
 
-<div class="trust-badge">
-  ✔ No stress. No hidden costs.
-</div>
+<div class="trust">✔ No stress. No hidden costs.</div>
 
-<section class="container">
+<section>
   <h2>Featured Products</h2>
 
   <div class="products">
 
-    <!-- LAPTOP -->
-    <div class="product-card">
+    <div class="card">
+      <img src="assets/images/laptop1.jpg" alt="Refurbished Laptop">
       <h3>Refurbished Business Laptop</h3>
-
-      <div class="gallery">
-        <img src="/assets/images/products/laptop1.jpg" alt="Laptop image 1">
-        <img src="/assets/images/products/laptop2.jpg" alt="Laptop image 2">
-        <img src="/assets/images/products/laptop3.jpg" alt="Laptop image 3">
-      </div>
-
-      <p>
-        Reliable refurbished laptop for work, study, and everyday use.
-        Fully tested, cleaned, and ready to perform.
-      </p>
-
-      <a class="btn" href="https://wa.me/27628952301">Order on WhatsApp</a>
+      <p>Reliable refurbished laptop for work, study, and everyday use. Fully tested and ready.</p>
+      <a class="btn" href="https://wa.me/27XXXXXXXXX">Order on WhatsApp</a>
     </div>
 
-    <!-- SHOES -->
-    <div class="product-card">
+    <div class="card">
+      <img src="assets/images/shoes1.jpg" alt="Sports Shoes">
       <h3>Comfort Sports Shoes</h3>
-
-      <div class="gallery">
-        <img src="/assets/images/products/shoes1.jpg" alt="Shoes image 1">
-        <img src="/assets/images/products/shoes2.jpg" alt="Shoes image 2">
-      </div>
-
-      <p>
-        Durable, comfortable sports shoes suitable for everyday wear.
-      </p>
-
-      <a class="btn" href="https://wa.me/27628952301">Order on WhatsApp</a>
+      <p>Durable and comfortable shoes for everyday wear and long hours.</p>
+      <a class="btn" href="https://wa.me/27XXXXXXXXX">Order on WhatsApp</a>
     </div>
 
-    <!-- BOOTS -->
-    <div class="product-card">
+    <div class="card">
+      <img src="assets/images/boots1.jpg" alt="Work Boots">
       <h3>Timberland-Style Boots</h3>
-
-      <div class="gallery">
-        <img src="/assets/images/products/boots1.jpg" alt="Boots image 1">
-        <img src="/assets/images/products/boots2.jpg" alt="Boots image 2">
-      </div>
-
-      <p>
-        Strong, stylish boots designed for long hours and tough conditions.
-      </p>
-
-      <a class="btn" href="https://wa.me/27628952301">Order on WhatsApp</a>
+      <p>Strong, stylish boots designed for tough conditions and long wear.</p>
+      <a class="btn" href="https://wa.me/27XXXXXXXXX">Order on WhatsApp</a>
     </div>
 
   </div>
 </section>
 
-<section class="container">
+<section>
   <h2>About Us</h2>
-  <p>
-    WorkReady Store supplies affordable, practical products for everyday working
-    people across South Africa. Simple ordering, honest pricing, and reliable support.
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    WorkReady Store supplies affordable, practical products for everyday working people across South Africa.
+    Simple ordering, honest pricing, reliable support.
   </p>
 </section>
 
-<section class="container">
+<section>
   <h2>Our Vision</h2>
-  <p>
+  <p style="text-align:center;">
     To make quality work essentials accessible without stress or hidden costs.
   </p>
 </section>
 
-<section class="container">
+<section>
   <h2>Our Mission</h2>
-  <p>
+  <p style="text-align:center;">
     Provide reliable products, transparent pricing, and direct WhatsApp ordering.
   </p>
 </section>
 
-<section class="container">
+<section>
   <h2>Payment Options</h2>
   <ul>
     <li>Cash on delivery (selected areas)</li>
@@ -251,13 +174,11 @@
   </ul>
 </section>
 
-<div class="sticky-whatsapp">
-  <a href="https://wa.me/27628952301">💬 WhatsApp</a>
-</div>
-
 <footer>
-  <p>© 2026 WorkReady Store | WhatsApp Orders Only</p>
+  © 2026 WorkReady Store | WhatsApp Orders Only
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/27XXXXXXXXX">WhatsApp</a>
 
 </body>
 </html>
