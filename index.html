@@ -1,236 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WorkReady Store | WhatsApp Orders Only</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>026 WorkReady Store</title>
 
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1794664681252011');
-    fbq('track', 'PageView');
-  </script>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f6f6;
+  color: #222;
+}
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1794664681252011&ev=PageView&noscript=1"/>
-  </noscript>
+header {
+  background: #000;
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+}
 
-  <!-- TIKTOK PIXEL -->
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;
-      var ttq=w[t]=w[t]||[];
-      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
-      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-      ttq.load=function(e){
-        var i="https://analytics.tiktok.com/i18n/pixel/events.js";
-        var o=d.createElement("script");
-        o.type="text/javascript";o.async=true;
-        o.src=i+"?sdkid="+e+"&lib="+t;
-        var a=d.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(o,a)
-      };
-      ttq.load('D5G25JBC77U2JQE9TJEG');
-      ttq.page();
-    }(window, document, 'ttq');
-  </script>
+section {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f6f6f6;
-      color: #222;
-    }
+h2 {
+  margin-bottom: 15px;
+}
 
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-    }
+.trust {
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  padding: 15px;
+  margin: 25px 0;
+  font-weight: bold;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      padding: 40px 0;
-    }
+.gallery img {
+  height: 260px;
+  border-radius: 12px;
+}
 
-    .hero img {
-      width: 100%;
-      border-radius: 12px;
-    }
+/* PAYMENT */
+.payment {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 15px 26px;
-      background: linear-gradient(135deg,#25D366,#1ebe57);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+/* WHATSAPP BUTTON */
+.sticky-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 
-    .trust-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 30px 0;
-      font-weight: bold;
-    }
+.sticky-whatsapp a {
+  background: #25D366;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .trust-strip span {
-      background: #fff;
-      padding: 10px 16px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,.1);
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
-      text-align: center;
-    }
-
-    /* IMAGE GALLERY */
-    .gallery {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-    }
-
-    .gallery img {
-      flex: 0 0 100%;
-      border-radius: 12px;
-      scroll-snap-align: start;
-    }
-
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-    }
-
-    .sticky-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-    }
-
-    .sticky-whatsapp a {
-      background: #25D366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    @media (max-width:768px){
-      .hero { grid-template-columns: 1fr; text-align: center; }
-    }
-  </style>
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container">
-    <h1>WorkReady Store</h1>
-    <p>Affordable Work-Ready Tech & Footwear</p>
-  </div>
+  <h1>026 WorkReady Store</h1>
+  <p>WhatsApp Orders Only</p>
 </header>
 
-<section class="container hero">
-  <div>
-    <h2>Work-Ready Tools for Real Life</h2>
-    <p>No stress. No hidden costs. Just honest products delivered nationwide.</p>
-    <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('General')">Chat on WhatsApp</a>
-  </div>
-  <img src="images/laptop1.jpg" alt="WorkReady Products">
-</section>
+<section>
+  <h2>About Us</h2>
+  <p>
+    WorkReady Store provides quality footwear for work, lifestyle, and everyday comfort.
+    Real products. Real photos. No middlemen.
+  </p>
 
-<section class="trust-strip">
-  <span>🚚 Nationwide Delivery</span>
-  <span>✔ Quality Checked</span>
-  <span>💬 WhatsApp Support</span>
-  <span>😌 No stress. No hidden costs.</span>
-</section>
+  <h2>Our Vision</h2>
+  <p>To make quality footwear accessible without stress or hidden costs.</p>
 
-<section class="container">
-  <h2>Our Products</h2>
-  <div class="products">
+  <h2>Our Mission</h2>
+  <p>Deliver trusted shoes through direct WhatsApp ordering with transparency and speed.</p>
 
-    <div class="card">
-      <div class="gallery">
-        <img src="images/laptop1.jpg">
-        <img src="images/laptop2.jpg">
-      </div>
-      <h3>Refurbished Laptops</h3>
-      <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Laptop')">Order via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <div class="gallery">
-        <img src="images/shoes1.jpg">
-        <img src="images/shoes2.jpg">
-      </div>
-      <h3>Sports Shoes</h3>
-      <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Shoes')">Order via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <div class="gallery">
-        <img src="images/boots1.jpg">
-        <img src="images/boots2.jpg">
-      </div>
-      <h3>Timberland-Style Boots</h3>
-      <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Boots')">Order via WhatsApp</a>
-    </div>
-
+  <div class="trust">
+    ✅ No stress. No hidden costs.
   </div>
 </section>
 
-<section class="container">
-  <h2>About WorkReady Store</h2>
-  <p>We help South Africans access reliable work tools and footwear without stress.</p>
+<section>
+  <h2>Product Gallery</h2>
 
-  <h3>Our Mission</h3>
-  <p>Affordable, trusted work-ready products for everyday people.</p>
+  <div class="gallery">
+    <img src="images/timberland.jpg" alt="Timberland Boots">
+    <img src="images/nike-grey.jpg" alt="Nike Grey">
+    <img src="images/newbalance-550.jpg" alt="New Balance 550">
+    <img src="images/adidas-color.jpg" alt="Adidas Colour">
+    <img src="images/nike-black.jpg" alt="Nike Black">
+    <img src="images/jordan-green.jpg" alt="Jordan Green">
+    <img src="images/platform-beige.jpg" alt="Platform Beige">
+  </div>
+</section>
 
-  <h3>Our Vision</h3>
-  <p>A trusted South African online brand built on honesty and access.</p>
+<section class="payment">
+  <h2>Payment Methods</h2>
+  <p>💳 EFT / Cash Deposit</p>
+  <p>📦 Nationwide Delivery Available</p>
+  <p>📱 Order via WhatsApp only</p>
 </section>
 
 <footer>
@@ -238,15 +134,22 @@
 </footer>
 
 <div class="sticky-whatsapp">
-  <a href="https://wa.me/27628952301">💬 Chat on WhatsApp</a>
+  <a href="https://wa.me/27628952301" onclick="trackWhatsApp('General Inquiry')">
+    💬 Chat on WhatsApp
+  </a>
 </div>
 
 <script>
-function trackWhatsApp(product){
-  if(typeof fbq!=="undefined"){fbq('track','Contact',{content_name:product})}
-  if(typeof ttq!=="undefined"){ttq.track('Contact',{content_name:product})}
+function trackWhatsApp(product) {
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact', {
+      content_name: product,
+      method: 'WhatsApp'
+    });
+  }
 }
 </script>
 
 </body>
 </html>
+
