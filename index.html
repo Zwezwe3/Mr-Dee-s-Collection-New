@@ -17,27 +17,13 @@ body {
 header {
   background: #000;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
-}
-
-h1,h2,h3 { margin-top: 0; }
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 14px 26px;
-  background: linear-gradient(135deg, #25D366, #1ebe57);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  box-shadow: 0 6px 18px rgba(37,211,102,.35);
 }
 
 /* HERO */
@@ -53,6 +39,17 @@ h1,h2,h3 { margin-top: 0; }
   border-radius: 12px;
 }
 
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #25D366, #1ebe57);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
 /* TRUST STRIP */
 .trust-strip {
   display: flex;
@@ -61,19 +58,18 @@ h1,h2,h3 { margin-top: 0; }
   justify-content: center;
   margin: 30px 0;
 }
-
+<span>😌 No stress. No hidden costs.</span>
 .trust-strip span {
   background: #fff;
   padding: 10px 16px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,.08);
-  font-weight: bold;
 }
 
 /* PRODUCTS */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
@@ -88,17 +84,15 @@ h1,h2,h3 { margin-top: 0; }
 .card img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 12px;
 }
 
 /* IMAGE GALLERY */
 .gallery {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
-
 .gallery img {
   flex: 0 0 100%;
   border-radius: 12px;
@@ -108,12 +102,11 @@ h1,h2,h3 { margin-top: 0; }
 /* STICKY WHATSAPP */
 .sticky-whatsapp {
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
 }
-
 .sticky-whatsapp a {
   background: #25D366;
   color: #fff;
@@ -129,12 +122,14 @@ footer {
   color: #fff;
   text-align: center;
   padding: 25px 0;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .hero { grid-template-columns: 1fr; text-align: center; }
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 </style>
 
@@ -148,8 +143,8 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1794664681252011');
-fbq('track','PageView');
+fbq('init', '1794664681252011');
+fbq('track', 'PageView');
 </script>
 
 <noscript>
@@ -159,12 +154,12 @@ src="https://www.facebook.com/tr?id=1794664681252011&ev=PageView&noscript=1"/>
 
 <!-- ================= TIKTOK PIXEL ================= -->
 <script>
-!function (w,d,t) {
+!function (w, d, t) {
   w.TiktokAnalyticsObject=t;
   var ttq=w[t]=w[t]||[];
   ttq.methods=["page","track"];
-  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat([].slice.call(arguments)))}};  
-  for(var i=0;i<ttq.methods.length;i++) ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat([].slice.call(arguments)))}}; 
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
   ttq.load=function(e){
     var s=d.createElement("script");
     s.async=true;
@@ -173,36 +168,37 @@ src="https://www.facebook.com/tr?id=1794664681252011&ev=PageView&noscript=1"/>
   };
   ttq.load('D5G25JBC77U2JQE9TJEG');
   ttq.page();
-}(window,document,'ttq');
+}(window, document, 'ttq');
 </script>
-</head>
 
+</head>
 <body>
 
 <header>
   <div class="container">
     <h1>WorkReady Store</h1>
-    <p>Quality Tech & Footwear | South Africa</p>
+   <p>
+    WorkReady Store helps South Africans get work-ready with reliable laptops
+    and durable footwear — without stress or hidden costs.
+  </p>
   </div>
 </header>
 
 <section class="container hero">
   <div>
     <h2>Work-Ready Tools for Real Life</h2>
-    <p>Affordable laptops and durable footwear to help you work, study and move forward.</p>
-    <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('General')">
-      Chat on WhatsApp
-    </a>
+    <p>No stress. No hidden costs. Order easily via WhatsApp.</p>
+    <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Hero')">Chat on WhatsApp</a>
   </div>
-  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80">
+  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Products">
 </section>
 
-<div class="trust-strip">
+<section class="trust-strip">
   <span>🚚 Nationwide Delivery</span>
   <span>✔ Quality Checked</span>
   <span>💬 WhatsApp Support</span>
   <span>😌 No stress. No hidden costs.</span>
-</div>
+</section>
 
 <section class="container">
   <h2>Product Gallery</h2>
@@ -218,60 +214,54 @@ src="https://www.facebook.com/tr?id=1794664681252011&ev=PageView&noscript=1"/>
   <div class="products">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04">
-      <h3>Refurbished Laptops</h3>
+      <h3>Laptops</h3>
       <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Laptop')">Order</a>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
       <h3>Sports Shoes</h3>
       <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Shoes')">Order</a>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
-      <h3>Timberland-Style Boots</h3>
+      <h3>Boots</h3>
       <a class="btn" href="https://wa.me/27628952301" onclick="trackWhatsApp('Boots')">Order</a>
     </div>
   </div>
 </section>
 
 <section class="container">
-  <h2>About Us</h2>
-  <p>WorkReady Store helps South Africans access reliable tech and footwear with simple WhatsApp ordering.</p>
-
+  <h2>About WorkReady Store</h2>
+  WorkReady Store helps South Africans get work-ready with reliable laptops
+    and durable footwear — without stress or hidden costs.
   <h3>Mission</h3>
-  <p>Make work-ready tools affordable and stress-free.</p>
-
+  <p>
+    To make quality work tools affordable, accessible, and simple to order
+    through fast WhatsApp support.
+  </p>
   <h3>Vision</h3>
-  <p>Become South Africa’s trusted WhatsApp-first store.</p>
+  <p>
+    To become a trusted South African brand for work-ready technology and lifestyle products.
+  </p>
 </section>
 
 <section class="container">
   <h2>Delivery & Payment</h2>
-  <div class="products">
-    <div class="card"><h3>🚚 Nationwide Delivery</h3><p>Fast courier shipping.</p></div>
-    <div class="card"><h3>💬 WhatsApp Orders</h3><p>Confirm before paying.</p></div>
-    <div class="card"><h3>🔐 Secure Payments</h3><p>No hidden costs.</p></div>
-  </div>
+  <p>Nationwide delivery. Payments confirmed via WhatsApp.</p>
 </section>
-
-<div class="sticky-whatsapp">
-  <a href="https://wa.me/27628952301">💬 Chat on WhatsApp</a>
-</div>
 
 <footer>
   <p>© 2026 WorkReady Store | WhatsApp Orders Only</p>
 </footer>
 
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/27628952301">💬 Chat on WhatsApp</a>
+</div>
+
 <script>
-function trackWhatsApp(product){
-  if(typeof fbq!=='undefined'){
-    fbq('track','Contact',{content_name:product,method:'WhatsApp'});
-  }
-  if(typeof ttq!=='undefined'){
-    ttq.track('Contact',{content_name:product});
-  }
+function trackWhatsApp(product) {
+  if (typeof fbq !== 'undefined') fbq('track', 'Contact', {content_name: product});
+  if (typeof ttq !== 'undefined') ttq.track('Contact', {content_name: product});
 }
 </script>
 
