@@ -19,16 +19,19 @@ header {
   padding: 25px;
 }
 
-.trust {
-  background: #111;
-  color: #00c853;
-  text-align: center;
-  padding: 10px;
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
   font-weight: bold;
 }
 
 section {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
 }
@@ -40,323 +43,148 @@ h2 {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-  .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-  #lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
+.product {
+  background: white;
+  padding: 15px;
   border-radius: 10px;
-}
-  /* Product card hover */
-.product-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
-
-/* Image hover */
-.gallery img {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-/* ================= PRODUCT GRID ================= */
-
-.product-card {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* Gallery layout */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-/* FORCE images to fit boxes */
-.gallery img {
+.product img {
   width: 100%;
-  height: 120px;          /* 🔥 KEY LINE */
-  object-fit: cover;      /* 🔥 KEY LINE */
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
-  background: #f2f2f2;
-  
-  /* Bigger gallery for laptops */
-.product-card:first-of-type .gallery img {
-  height: 160px;
-}
-  .btn {
-  transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.price {
+  font-weight: bold;
+  margin: 10px 0;
 }
+
 .btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 18px;
-  background: #25d366;
-  color: #fff;
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
   text-decoration: none;
   border-radius: 25px;
-  font-weight: bold;
+  margin-top: 10px;
 }
 
 footer {
   background: #000;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<header class="site-header">
+<header>
   <h1>WorkReady Store</h1>
-  <p>Quality tech & footwear — WhatsApp orders only</p>
+  <nav>
+    <a href="#laptops">Laptops</a>
+    <a href="#iphones">iPhones</a>
+    <a href="#shoes">Shoes</a>
+  </nav>
 </header>
 
-<div class="trust-strip">
-  ✅ No stress. No hidden costs.
-</div>
+<!-- LAPTOPS -->
+<section id="laptops">
+  <h2>Laptops</h2>
+  <div class="products">
 
-<main class="container">
-
-  <!-- ================= PRODUCTS ================= -->
-  <section>
-    <h2>Featured Products</h2>
-
-    <!-- LAPTOP -->
-    <div class="product-card">
-      <h3>Refurbished Business Laptop</h3>
-
-      <div class="gallery">
-<img src="assets/images/products/laptop17.jpg.jpg">
-<img src="assets/images/products/laptop25.jpg.jpg">
-<img src="assets/images/products/laptop31.jpg.jpg">
-<img src="assets/images/products/laptop13.jpg.jpg">
-<img src="assets/images/products/laptop56.jpg.jpg">
-<img src="assets/images/products/laptop45.jpg.jpg">
-<img src="assets/images/products/laptop19.jpg.jpg">
-<img src="assets/images/products/laptop23.jpg.jpg">
-<img src="assets/images/products/laptop26.jpg.jpg">
-<img src="assets/images/products/laptop39.jpg.jpg">
-<img src="assets/images/products/laptop52.jpg.jpg">
-<img src="assets/images/products/laptop60.jpg.jpg">
-<img src="assets/images/products/laptop45.jpg.jpg">
-<img src="assets/images/products/laptop35.jpg.jpg">
-  <img src="assets/images/products/laptop80.jpg.jpg">
-<img src="assets/images/products/laptop81.jpg.jpg">
-<img src="assets/images/products/laptop47.jpg.jpg">
-<img src="assets/images/products/laptop30.jpg.jpg">
-<img src="assets/images/products/laptop37.jpg.jpg">
-<img src="assets/images/products/laptop8.jpg.jpg">        
-      </div>
-
-      <p>Fully tested, cleaned, and ready for work or study.</p>
-
-      <a class="btn"
-         href="https://wa.me/27628952301?text=Hi%20I%20want%20to%20order%20a%20laptop"
-         onclick="trackWhatsApp('Laptop')">
-         Order on WhatsApp
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Laptop">
+      <h3>Dell Latitude</h3>
+      <p>Intel i5 • 8GB RAM • 256GB SSD</p>
+      <p class="price">R5,200</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20Dell%20Latitude">
+        Order
       </a>
     </div>
 
-    <!-- SHOES -->
-    <div class="product-card">
-      <h3>Comfort Sports Shoes</h3>
-
-     <div class="gallery">
- <img src="assets/images/products/sportsshoe6.jpg.jpg">
-<img src="assets/images/products/sportsshoe7.jpg.jpg">
-<img src="assets/images/products/sportsshoe3.jpg.jpg">
- <img src="assets/images/products/sportsshoe16.jpg.jpg">
-<img src="assets/images/products/sportsshoe13.jpg.jpg">
-<img src="assets/images/products/sportsshoe8.jpg.jpg">
- <img src="assets/images/products/sportsshoe5.jpg.jpg">
-<img src="assets/images/products/sportsshoe12.jpg.jpg">
-<img src="assets/images/products/sportsshoe14.jpg.jpg">       
-</div>
-
-      <p>Durable everyday shoes for comfort and long wear.</p>
-
-      <a class="btn"
-         href="https://wa.me/27628952301?text=Hi%20I%20want%20to%20order%20sports%20shoes"
-         onclick="trackWhatsApp('Sports Shoes')">
-         Order on WhatsApp
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Laptop">
+      <h3>HP ProBook</h3>
+      <p>Intel i7 • 16GB RAM • 512GB SSD</p>
+      <p class="price">R7,800</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20HP%20ProBook">
+        Order
       </a>
     </div>
 
-    <!-- BOOTS -->
-    <div class="product-card">
-      <h3>Timberland-Style Boots</h3>
+  </div>
+</section>
 
-     <div class="gallery">
-  <img src="assets/images/products/boot1.jpg.jpg">
-  <img src="assets/images/products/boot5.jpg.jpg">
-  <img src="assets/images/products/boot3.jpg.jpg">
-   <img src="assets/images/products/boot4.jpg.jpg">
-  <img src="assets/images/products/boot9.jpg.jpg">
-  <img src="assets/images/products/boot7.jpg.jpg">
-   <img src="assets/images/products/boot12.jpg.jpg">
-  <img src="assets/images/products/boot19.jpg.jpg">
-  <img src="assets/images/products/boot20.jpg.jpg">
-    <img src="assets/images/products/boot7.jpg.jpg">
-   <img src="assets/images/products/boot40.jpg.jpg">
-  <img src="assets/images/products/boot43.jpg.jpg">
-  <img src="assets/images/products/boot41.jpg.jpg">
-  <img src="assets/images/products/boot44.jpg.jpg">
-</div> 
+<!-- IPHONES -->
+<section id="iphones">
+  <h2>iPhones</h2>
+  <div class="products">
 
-      <p>Strong boots built for tough working conditions.</p>
-
-      <a class="btn"
-         href="https://wa.me/27628952301?text=Hi%20I%20want%20to%20order%20boots"
-         onclick="trackWhatsApp('Boots')">
-         Order on WhatsApp
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="iPhone">
+      <h3>iPhone 11</h3>
+      <p>64GB • Face ID • Dual Camera</p>
+      <p class="price">R6,500</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20iPhone%2011">
+        Order
       </a>
     </div>
-  </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section>
-    <h2>About Us</h2>
-    <p>
-      WorkReady Store supplies affordable, practical products for everyday
-      working people across South Africa. Simple ordering, honest pricing,
-      and reliable support.
-    </p>
-  </section>
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="iPhone">
+      <h3>iPhone 12</h3>
+      <p>128GB • 5G • OLED</p>
+      <p class="price">R8,500</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20iPhone%2012">
+        Order
+      </a>
+    </div>
 
-  <!-- ================= VISION ================= -->
-  <section>
-    <h2>Our Vision</h2>
-    <p>
-      To make quality work essentials accessible without stress or hidden costs.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= MISSION ================= -->
-  <section>
-    <h2>Our Mission</h2>
-    <p>
-      Provide reliable products, transparent pricing, and direct WhatsApp ordering.
-    </p>
-  </section>
+<!-- SHOES -->
+<section id="shoes">
+  <h2>Shoes</h2>
+  <div class="products">
 
-  <!-- ================= PAYMENT ================= -->
-  <section class="payment">
-    <h2>Payment Options</h2>
-    <ul>
-      <li>Cash on delivery (selected areas)</li>
-      <li>Instant EFT</li>
-      <li>Bank deposit</li>
-    </ul>
-  </section>
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Shoes">
+      <h3>Sports Sneakers</h3>
+      <p>Lightweight • Breathable</p>
+      <p class="price">R850</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20sports%20sneakers">
+        Order
+      </a>
+    </div>
 
-</main>
+    <div class="product">
+      <img src="https://via.placeholder.com/300" alt="Boots">
+      <h3>Timberland Boots</h3>
+      <p>Durable leather • Work-ready</p>
+      <p class="price">R1,800</p>
+      <a class="btn" href="https://wa.me/27628952301?text=Hi%20I%20want%20the%20Timberland%20boots">
+        Order
+      </a>
+    </div>
+
+  </div>
+</section>
 
 <footer>
-  © 2026 WorkReady Store | WhatsApp Orders Only | 076 289 52301
+  © 2026 WorkReady Store | WhatsApp Orders: 076 289 52301
 </footer>
-<div id="lightbox">
-  <img id="lightbox-img">
-</div>
- <script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".gallery img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = "flex";
-    });
-  });
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-</script> 
 </body>
 </html>
 
