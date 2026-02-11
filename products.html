@@ -1,88 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Products | Mr Dee's Collection</title>
-<link rel="stylesheet" href="style.css">
-<style>
-/* Lightbox styles */
-#lightbox {
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-}
-</style>
-</head>
-<body>
-
-<header>
-<h1>Mr Dee's Collection</h1>
-<p>Quality products at affordable prices</p>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Shoes</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
 <section class="products">
-
   <div class="product">
-    <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max">
-    <p><strong>iPhone 14 Pro Max</strong><br>R18,999</p>
-    <a class="btn" href="https://wa.me/27628952301">Order on WhatsApp</a>
+    <img src="https://www.chavda.com/cdn/shop/files/UX3405CA_OU93210BL0X_1_0283.webp?v=1770320187" alt="Laptop 3 - AMD Ryzen 5, 16GB RAM, 512GB SSD">
+    <p><strong>Laptop 3</strong><br>AMD Ryzen 5, 16GB RAM, 512GB SSD<br><span class="price">R12,499</span></p>
   </div>
 
   <div class="product">
-    <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg" alt="Sports Shoe">
-    <p><strong>Sports Shoe</strong><br>R1,999</p>
-    <a class="btn" href="https://wa.me/27628952301">Order on WhatsApp</a>
+    <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="Asus Laptop Model">
+    <p><strong>Laptop 4</strong><br>ASUS Model<br><span class="price">R11,999</span></p>
   </div>
 
-  <!-- Add more products below in same structure -->
+  <div class="product">
+    <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max - Deep Purple">
+    <p><strong>iPhone 1</strong><br>iPhone 14 Pro Max<br><span class="price">R22,999</span></p>
+  </div>
 
+  <div class="product">
+    <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp" alt="iPhone 16 Pro - Natural Titanium">
+    <p><strong>iPhone 2</strong><br>iPhone 16 Pro<br><span class="price">R34,499</span></p>
+  </div>
+
+  <div class="product">
+    <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
+    <p><strong>Sports Shoe</strong><br>Nike<br><span class="price">R1,999</span></p>
+  </div>
+
+  <div class="product">
+    <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Waterproof Platform Boots">
+    <p><strong>Boots</strong><br>Timberland<br><span class="price">R2,999</span></p>
+  </div>
 </section>
-
-<!-- Lightbox container -->
-<div id="lightbox" onclick="this.style.display='none'">
-  <img id="lightbox-img" src="">
-</div>
-
-<footer>
-<p>Mr Dee's Collection</p>
-</footer>
-
-<script>
-// Lightbox script
-const images = document.querySelectorAll('.product img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
-</script>
-
-</body>
-</html>
