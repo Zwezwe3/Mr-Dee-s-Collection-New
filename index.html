@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection</title>
 <style>
-/* Body and global styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,7 +13,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Main navigation */
 nav {
   background: #007bff;
   color: #fff;
@@ -39,7 +37,6 @@ nav a:hover {
   color: #ffeb3b;
 }
 
-/* Section styling */
 .info-section {
   max-width: 900px;
   margin: 40px auto;
@@ -65,7 +62,6 @@ nav a:hover {
   font-size: 16px;
 }
 
-/* Products section */
 .products-nav {
   display: flex;
   justify-content: center;
@@ -96,7 +92,6 @@ nav a:hover {
   margin: 0 auto 40px auto;
 }
 
-/* Product cards */
 .product-link {
   text-decoration: none;
   color: inherit;
@@ -148,19 +143,46 @@ nav a:hover {
 <nav>
   <a href="#home">Home</a>
   <a href="#products">Products</a>
-  <a href="#iphones">iPhones</a>
-  <a href="#sports">Sports Shoes</a>
+  <a href="#iphones-section">iPhones</a>
+  <a href="#sports-section">Sports Shoes</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- Home Section -->
+<!-- Home Section (Mr Dee's Collection intro restored) -->
 <section id="home" class="info-section">
   <h2>Welcome to Mr Dee's Collection</h2>
-  <p>Your destination for quality laptops, Apple iPhones, and branded sports shoes. We connect you with trusted suppliers and deliver directly to your door anywhere in South Africa.</p>
+  <p>We connect you with trusted suppliers of quality laptops, Apple iPhones, and branded sports shoes. All products are sourced through reliable partners and shipped directly to your location anywhere in South Africa.</p>
+
+  <h3>What We Offer</h3>
+  <ul>
+    <li>Laptops for work, study, and everyday use</li>
+    <li>Branded sports shoes</li>
+    <li>Selected Apple iPhones</li>
+    <li>Direct supplier delivery</li>
+    <li>Warranty or guarantee included</li>
+  </ul>
+
+  <h3>How It Works</h3>
+  <ol>
+    <li>Choose your product.</li>
+    <li>Send a WhatsApp message with the model name.</li>
+    <li>Receive price and payment details.</li>
+    <li>Make payment.</li>
+    <li>Supplier ships directly to your door.</li>
+  </ol>
+
+  <h3>Why Choose Mr Dee's Collection</h3>
+  <ul>
+    <li>Trusted local suppliers</li>
+    <li>Direct-to-door delivery</li>
+    <li>Competitive pricing</li>
+    <li>Simple WhatsApp ordering</li>
+    <li>Supplier warranty or guarantee</li>
+  </ul>
 </section>
 
-<!-- Products Section -->
+<!-- Products Section with Subnav -->
 <section id="products">
   <nav class="products-nav">
     <a href="#laptops-section">Laptops</a>
@@ -173,10 +195,7 @@ nav a:hover {
 <section id="laptops-section" class="info-section">
   <h2>Laptops</h2>
   <p><strong>Shop with the Best</strong><br>
-  Find the world's top brands including HP, Dell, Lenovo, Acer, ASUS, Apple, and more. Perfect for home, business, or study. Hassle-free checkout and delivery to all major South African cities.</p>
-
-  <p><strong>Accessories</strong><br>
-  Chargers, cables, docking stations, batteries, monitors, and more at affordable prices.</p>
+  Find top brands including HP, Dell, Lenovo, Acer, ASUS, Apple, and more. Perfect for home, business, or study.</p>
 </section>
 
 <div id="laptops" class="products-grid">
@@ -200,9 +219,6 @@ nav a:hover {
   <h2>iPhones</h2>
   <p><strong>Latest iPhones</strong><br>
   Explore iPhone 16 Pro, iPhone 14 Pro Max, and other top Apple models with warranty from trusted suppliers.</p>
-
-  <p><strong>Accessories</strong><br>
-  Cases, chargers, screen protectors, and more at affordable prices.</p>
 </section>
 
 <div id="iphones" class="products-grid">
@@ -225,10 +241,7 @@ nav a:hover {
 <section id="sports-section" class="info-section">
   <h2>Sports Shoes</h2>
   <p><strong>Top Branded Shoes</strong><br>
-  Nike, Adidas, Timberland and more. Perfect for running, gym, or casual wear. Comfort and style guaranteed.</p>
-
-  <p><strong>Accessories</strong><br>
-  Insoles, shoelaces, and supports to keep your shoes performing at their best.</p>
+  Nike, Adidas, Timberland and more. Perfect for running, gym, or casual wear.</p>
 </section>
 
 <div id="sports" class="products-grid">
@@ -260,18 +273,15 @@ nav a:hover {
 </section>
 
 <script>
-// Fade-in on scroll for info and product cards
 function onScrollFadeIn() {
   const elements = document.querySelectorAll('.info-section, .product');
   const windowBottom = window.innerHeight + window.scrollY;
-
   elements.forEach(el => {
     if (el.offsetTop + 50 < windowBottom) {
       el.classList.add('visible');
     }
   });
 }
-
 window.addEventListener('scroll', onScrollFadeIn);
 window.addEventListener('load', onScrollFadeIn);
 </script>
