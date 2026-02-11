@@ -29,3 +29,43 @@
     <p><strong>Boots</strong><br>Timberland<br><span class="price">R2,999</span></p>
   </div>
 </section>
+
+<style>
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f6f6f6;
+}
+
+.product {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.price {
+  color: #007bff;
+  font-weight: bold;
+}
+</style>
