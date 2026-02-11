@@ -5,163 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f6f6f6;
-  color: #333;
-}
-
-nav {
-  background: #007bff;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ffeb3b;
-}
-
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-section h2 {
-  color: #007bff;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product {
-  text-align: center;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  cursor: pointer;
-}
-
-.product img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.price {
-  color: #007bff;
-  font-weight: bold;
-}
+body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
+nav { background:#007bff; color:#fff; display:flex; justify-content:center; padding:12px 0; }
+nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { color:#ffeb3b; }
+section { max-width:900px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
+section h2 { color:#007bff; }
 </style>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#laptops-section">Products</a>
-  <a href="#iphones-section">iPhones</a>
-  <a href="#sports-section">Sports Shoes</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
 </nav>
 
 <!-- Home Section -->
-<section id="home">
+<section>
   <h2>Welcome to Mr Dee's Collection</h2>
   <p>We connect you with trusted suppliers of quality laptops, Apple iPhones, and branded sports shoes. All products are sourced through reliable partners and shipped directly to your location anywhere in South Africa.</p>
-</section>
 
-<!-- Laptops Section -->
-<section id="laptops-section">
-  <h2>Laptops</h2>
-  <p>Top brands for work, study, or home use.</p>
-  <div class="products-grid">
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Laptop%203" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://www.chavda.com/cdn/shop/files/UX3405CA_OU93210BL0X_1_0283.webp?v=1770320187" alt="Laptop 3">
-        <p><strong>Laptop 3</strong><br>AMD Ryzen 5, 16GB RAM, 512GB SSD<br><span class="price">R12,499</span></p>
-      </div>
-    </a>
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Laptop%204" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="Laptop 4">
-        <p><strong>Laptop 4</strong><br>ASUS Model<br><span class="price">R11,999</span></p>
-      </div>
-    </a>
-  </div>
-</section>
+  <h3>What We Offer</h3>
+  <ul>
+    <li>Laptops for work, study, and everyday use</li>
+    <li>Branded sports shoes</li>
+    <li>Selected Apple iPhones</li>
+    <li>Direct supplier delivery</li>
+    <li>Warranty or guarantee included</li>
+  </ul>
 
-<!-- iPhones Section -->
-<section id="iphones-section">
-  <h2>iPhones</h2>
-  <div class="products-grid">
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20iPhone%201" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max">
-        <p><strong>iPhone 1</strong><br>iPhone 14 Pro Max<br><span class="price">R22,999</span></p>
-      </div>
-    </a>
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20iPhone%202" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp" alt="iPhone 16 Pro">
-        <p><strong>iPhone 2</strong><br>iPhone 16 Pro<br><span class="price">R34,499</span></p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- Sports Shoes Section -->
-<section id="sports-section">
-  <h2>Sports Shoes</h2>
-  <div class="products-grid">
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Sports%20Shoe" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
-        <p><strong>Sports Shoe</strong><br>Nike<br><span class="price">R1,999</span></p>
-      </div>
-    </a>
-    <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Boots" target="_blank" class="product-link">
-      <div class="product">
-        <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
-        <p><strong>Boots</strong><br>Timberland<br><span class="price">R2,999</span></p>
-      </div>
-    </a>
-  </div>
+  <h3>Why Choose Mr Dee's Collection</h3>
+  <ul>
+    <li>Trusted local suppliers</li>
+    <li>Direct-to-door delivery</li>
+    <li>Competitive pricing</li>
+    <li>Simple WhatsApp ordering</li>
+    <li>Supplier warranty or guarantee</li>
+  </ul>
 </section>
 
 <!-- About Section -->
