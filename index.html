@@ -22,6 +22,14 @@ body {
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
   line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.info-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .info-section h2 {
@@ -67,11 +75,18 @@ body {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.product.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .product:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
   cursor: pointer;
 }
@@ -91,17 +106,6 @@ body {
 .price {
   color: #007bff;
   font-weight: bold;
-}
-
-/* WhatsApp Button (optional, if you want a visual cue) */
-.whatsapp-icon {
-  display: inline-block;
-  margin-top: 10px;
-  width: 25px;
-  height: 25px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center center;
-  background-size: contain;
-  vertical-align: middle;
 }
 </style>
 </head>
@@ -186,6 +190,23 @@ body {
   </a>
 
 </section>
+
+<script>
+// Fade-in on scroll for info and product cards
+function onScrollFadeIn() {
+  const elements = document.querySelectorAll('.info-section, .product');
+  const windowBottom = window.innerHeight + window.scrollY;
+
+  elements.forEach(el => {
+    if (el.offsetTop + 50 < windowBottom) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', onScrollFadeIn);
+window.addEventListener('load', onScrollFadeIn);
+</script>
 
 </body>
 </html>
