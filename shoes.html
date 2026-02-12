@@ -3,33 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sport Shoes | Mr Dee's Collection</title>
-<link rel="stylesheet" href="style.css">
+<title>Sports Shoes - Mr Dee's Collection</title>
+<style>
+body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
+nav { background:#007bff; color:#fff; display:flex; justify-content:center; padding:12px 0; }
+nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { color:#ffeb3b; }
+
+.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; max-width:1200px; margin:0 auto; }
+.product-link { text-decoration:none; color:inherit; }
+.product { text-align:center; background:#fff; padding:15px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.product:hover { transform:translateY(-5px) scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); cursor:pointer; }
+.product img { width:100%; height:auto; border-radius:5px; }
+.price { color:#007bff; font-weight:bold; }
+section { max-width:900px; margin:40px auto 10px auto; padding:0 20px; }
+section h2 { color:#007bff; }
+a.contact-link { color:#007bff; text-decoration:none; font-weight:bold; }
+a.contact-link:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Sport Shoes & Timberland</h1>
-</header>
-
 <nav>
   <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="laptops.html">Laptops</a>
+  <a href="products.html">Laptops</a>
   <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Sport Shoes</a>
+  <a href="shoes.html">Sports Shoes</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="products">
-  <div class="product">
-    <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg" alt="Sports Shoe 1">
-    <p><strong>Sports Shoe 1</strong><br>R2,499</p>
-    <a href="https://wa.me/27628952301?text=I%20want%20to%20order%20Sports%20Shoe%201" class="btn">Chat on WhatsApp</a>
-  </div>
-  <div class="product">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.Y2NYFjfqOlC1D3jKswqmTgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sports Shoe 2">
-    <p><strong>Sports Shoe 2</strong><br>R2,299</p>
-    <a href="https://wa.me/27628952301?text=I%20want%20to%20order%20Sports%20Shoe%202" class="btn">Chat on WhatsApp</a>
-  </div>
+<section>
+  <h2>Sports Shoes</h2>
+</section>
+
+<div class="products-grid">
+  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Sports%20Shoe" target="_blank" class="product-link">
+    <div class="product">
+      <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
+      <p><strong>Sports Shoe</strong><br>Nike<br><span class="price">R1,999</span></p>
+    </div>
+  </a>
+  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Boots" target="_blank" class="product-link">
+    <div class="product">
+      <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
+      <p><strong>Boots</strong><br>Timberland<br><span class="price">R2,999</span></p>
+    </div>
+  </a>
+</div>
+
+<p>Order via WhatsApp: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a> | Email: <a class="contact-link" href="mailto:mrdeecollection@gmail.com">mrdeecollection@gmail.com</a></p>
+
+</body>
+</html>
