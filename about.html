@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Dee's Collection - About</title>
+<title>Mr Dee's Collection - Home</title>
 <style>
-body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
+body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
+nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; flex-wrap:wrap; }
 nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
 nav a:hover { color:#ffeb3b; }
-section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
+section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
 section h2 { color:#800000; }
+ul, ol { margin-left:20px; }
 a.contact-link { color:#800000; text-decoration:none; font-weight:bold; }
 a.contact-link:hover { text-decoration:underline; }
 
@@ -23,14 +24,16 @@ a.contact-link:hover { text-decoration:underline; }
   transition: transform 0.2s;
 }
 .whatsapp-btn:hover { transform:scale(1.1); }
+
+/* Section hover animation */
+section:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 </style>
 </head>
 <body>
 
-<nav class="navbar">
+<nav>
   <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="laptops.html">Laptops</a>
+  <a href="products.html">Store</a>
   <a href="iphones.html">iPhones</a>
   <a href="shoes.html">Sports Shoes</a>
   <a href="jeans.html">Jeans</a>
@@ -39,21 +42,41 @@ a.contact-link:hover { text-decoration:underline; }
 </nav>
 
 <section>
-  <h2>About Mr Dee's Collection</h2>
-  <p>Mr Dee's Collection connects you with trusted suppliers of high-quality laptops, Apple iPhones, and branded sports shoes in South Africa. Our mission is to make shopping easy, affordable, and reliable, with products delivered directly to your door.</p>
+  <h2>Welcome to Mr Dee's Collection</h2>
+  <p>We connect you with trusted suppliers of quality laptops, sport shoes, and selected Apple iPhones. All products are sourced through reliable partners and shipped directly to your location.</p>
 
-  <h2>Our Values</h2>
+  <h2>What We Offer</h2>
   <ul>
-    <li>Trust and reliability with every order</li>
-    <li>Affordable pricing for quality products</li>
-    <li>Direct-to-door delivery from trusted suppliers</li>
-    <li>Simple WhatsApp ordering for convenience</li>
+    <li>Laptops for work, study, and everyday use</li>
+    <li>Branded sport shoes</li>
+    <li>Selected Apple iPhones</li>
+    <li>Direct supplier delivery</li>
+    <li>Warranty or guarantee included</li>
   </ul>
 
-  <p>Contact us anytime via WhatsApp: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a> or email: <a class="contact-link" href="mailto:mrdeecollection@gmail.com">mrdeecollection@gmail.com</a></p>
+  <h2>How It Works</h2>
+  <ol>
+    <li>Choose your product.</li>
+    <li>Send a WhatsApp message with the model name:
+      <a class="contact-link" href="https://wa.me/27628952301" target="_blank">
+        +27 62 895 2301
+      </a>
+    </li>
+    <li>Receive price and payment details.</li>
+    <li>Make payment.</li>
+    <li>Supplier ships directly to your door.</li>
+  </ol>
+
+  <h2>Why Choose Mr Dee's Collection</h2>
+  <ul>
+    <li>Trusted local suppliers</li>
+    <li>Direct-to-door delivery</li>
+    <li>Competitive pricing</li>
+    <li>Simple WhatsApp ordering</li>
+    <li>Supplier warranty or guarantee</li>
+  </ul>
 </section>
 
-<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
 
 </body>
