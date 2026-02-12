@@ -28,24 +28,105 @@ nav a:hover { background:#a52a2a; }
 section { max-width:1200px; margin:40px auto; padding:20px; }
 h2 { color:#800000; text-align:center; margin-bottom:20px; }
 
-.gallery-grid {
+.gallery {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
 }
-.gallery-item {
-  background:white;
+.gallery img {
+  width:100%;
+  height:auto;
   border-radius:10px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  overflow:hidden;
   cursor:pointer;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.gallery-item:hover {
+.gallery img:hover {
   transform:scale(1.05);
   box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
-.gallery-item img {
-  width:100%;
-  height:auto;
-  display:block
+
+/* Lightbox */
+#lightbox {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+#lightbox span {
+  position:absolute;
+  top:20px;
+  right:30px;
+  color:white;
+  font-size:36px;
+  cursor:pointer;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="iphones.html">iPhones</a>
+  <a href="shoes.html">Sports Shoes</a>
+  <a href="jeans.html">Jeans</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Gallery</h2>
+<div class="gallery">
+    <img src="469397955_555769773945031_5435838952461765627_n.jpg" alt="Gallery item">
+    <img src="471168478_567211209467554_348796940778080797_n.jpg" alt="HP laptop package">
+    <img src="471474623_567219082800100_8411453691755807827_n (1).jpg" alt="Gallery item">
+    <img src="471327887_567219086133433_5377521008140909153_n (1).jpg" alt="Gallery item">
+    <img src="490813930_1850754289078059_4878162692189863775_n.jpg" alt="Gallery item">
+    <img src="491210622_1850754472411374_7778383605876351303_n.jpg" alt="Gallery item">
+</div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded Image">
+</div>
+
+<script>
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('close');
+
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', e => {
+  if(e.target === lightbox) lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
