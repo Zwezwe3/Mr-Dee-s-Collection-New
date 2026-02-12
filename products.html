@@ -8,8 +8,8 @@
 body {
   margin:0;
   font-family: Arial, sans-serif;
-  background: #f5e6e8; /* light maroon */
-  color: #333;
+  background:#f5e6e8;
+  color:#333;
 }
 nav {
   background:#800000;
@@ -24,10 +24,10 @@ nav a {
   font-weight:bold;
 }
 nav a:hover { background:#a52a2a; }
+
 section { max-width:1200px; margin:40px auto; padding:20px; }
 h2 { color:#800000; text-align:center; margin-bottom:20px; }
 
-/* Product Grid */
 .products-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -46,12 +46,9 @@ h2 { color:#800000; text-align:center; margin-bottom:20px; }
   transform:scale(1.05);
   box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
-.product img {
-  width:100%;
-  height:auto;
-  border-radius:5px;
-}
+.product img { width:100%; height:auto; border-radius:5px; }
 .price { color:#800000; font-weight:bold; margin-top:5px; display:block; }
+
 .buy-btn {
   background:#800000;
   color:white;
@@ -118,34 +115,58 @@ h2 { color:#800000; text-align:center; margin-bottom:20px; }
 <div class="products-grid">
 
 <!-- Laptops -->
-<div class="product" data-name="Lenovo ThinkPad Yoga" data-price="R15,999" data-image="520054024_715766014603873_2695606724436205445_n.jpg">
-  <img src="520054024_715766014603873_2695606724436205445_n.jpg" alt="Lenovo ThinkPad Yoga">
-  <p><strong>Lenovo ThinkPad Yoga</strong><br>Intel i7, 16GB RAM, 512GB SSD<br><span class="price">R15,999</span></p>
+<div class="product" data-name="Lenovo ThinkPad Yoga Touch" data-price="R15,999" data-specs="Lenovo ThinkPad Yoga Touch, 16GB RAM, 512GB SSD" data-image="images/520054024_715766014603873_2695606724436205445_n.jpg">
+  <img src="images/520054024_715766014603873_2695606724436205445_n.jpg" alt="Lenovo ThinkPad Yoga Touch">
+  <p><strong>Lenovo ThinkPad Yoga Touch</strong><br>16GB RAM, 512GB SSD<br><span class="price">R15,999</span></p>
   <form action="https://www.payfast.co.za/eng/process" method="post">
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
     <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
     <input type="hidden" name="amount" value="15999.00">
-    <input type="hidden" name="item_name" value="Lenovo ThinkPad Yoga">
+    <input type="hidden" name="item_name" value="Lenovo ThinkPad Yoga Touch">
     <input type="submit" class="buy-btn" value="Buy Now">
   </form>
 </div>
 
-<div class="product" data-name="Asus Laptop" data-price="R12,499" data-image="481942540_614430458070763_4143823787333632966_n.jpg">
-  <img src="481942540_614430458070763_4143823787333632966_n.jpg" alt="Asus Laptop">
-  <p><strong>Asus Laptop</strong><br>Intel i5, 8GB RAM, 256GB SSD<br><span class="price">R12,499</span></p>
+<div class="product" data-name="Asus Laptop Model" data-price="R11,999" data-specs="ASUS Laptop" data-image="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg">
+  <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="Asus Laptop Model">
+  <p><strong>ASUS Laptop</strong><br>R11,999</p>
   <form action="https://www.payfast.co.za/eng/process" method="post">
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
     <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
-    <input type="hidden" name="amount" value="12499.00">
-    <input type="hidden" name="item_name" value="Asus Laptop">
+    <input type="hidden" name="amount" value="11999.00">
+    <input type="hidden" name="item_name" value="Asus Laptop Model">
+    <input type="submit" class="buy-btn" value="Buy Now">
+  </form>
+</div>
+
+<div class="product" data-name="HP Core i5" data-price="R9,999" data-specs="HP Core i5 Laptop, 8GB RAM, 256GB SSD" data-image="images/482073298_614430021404140_4176356738869544844_n.jpg">
+  <img src="images/482073298_614430021404140_4176356738869544844_n.jpg" alt="HP Core i5">
+  <p><strong>HP Core i5</strong><br>8GB RAM, 256GB SSD<br><span class="price">R9,999</span></p>
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+    <input type="hidden" name="amount" value="9999.00">
+    <input type="hidden" name="item_name" value="HP Core i5">
+    <input type="submit" class="buy-btn" value="Buy Now">
+  </form>
+</div>
+
+<div class="product" data-name="MacOS Big Sur" data-price="R34,499" data-specs="Apple MacBook with MacOS Big Sur, 16GB RAM, 512GB SSD" data-image="images/483065346_614042614776214_8801819185534169247_n.jpg">
+  <img src="images/483065346_614042614776214_8801819185534169247_n.jpg" alt="MacOS Big Sur">
+  <p><strong>MacOS Big Sur</strong><br>16GB RAM, 512GB SSD<br><span class="price">R34,499</span></p>
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+    <input type="hidden" name="amount" value="34499.00">
+    <input type="hidden" name="item_name" value="MacOS Big Sur">
     <input type="submit" class="buy-btn" value="Buy Now">
   </form>
 </div>
 
 <!-- iPhones -->
-<div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-image="491736509_1852484418905046_8802287681723526745_n.jpg">
-  <img src="491736509_1852484418905046_8802287681723526745_n.jpg" alt="iPhone 14 Pro Max">
-  <p><strong>iPhone 14 Pro Max</strong><br>256GB Storage<br><span class="price">R22,999</span></p>
+<div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-specs="Premium Apple Smartphone" data-image="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg">
+  <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max">
+  <p><strong>iPhone 14 Pro Max</strong><br>R22,999</p>
   <form action="https://www.payfast.co.za/eng/process" method="post">
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
     <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
@@ -155,10 +176,22 @@ h2 { color:#800000; text-align:center; margin-bottom:20px; }
   </form>
 </div>
 
-<!-- Sports Shoes -->
-<div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-image="491950339_1852484628905025_1160845635907717103_n.jpg">
-  <img src="491950339_1852484628905025_1160845635907717103_n.jpg" alt="Nike Sports Shoe">
-  <p><strong>Nike Sports Shoe</strong><br>Sizes 6-11<br><span class="price">R1,999</span></p>
+<div class="product" data-name="iPhone 16 Pro" data-price="R34,499" data-specs="Premium Apple Smartphone" data-image="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp">
+  <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp" alt="iPhone 16 Pro">
+  <p><strong>iPhone 16 Pro</strong><br>R34,499</p>
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+    <input type="hidden" name="amount" value="34499.00">
+    <input type="hidden" name="item_name" value="iPhone 16 Pro">
+    <input type="submit" class="buy-btn" value="Buy Now">
+  </form>
+</div>
+
+<!-- Shoes / Boots -->
+<div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-specs="Nike branded sports shoe" data-image="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
+  <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
+  <p><strong>Nike Sports Shoe</strong><br>R1,999</p>
   <form action="https://www.payfast.co.za/eng/process" method="post">
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
     <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
@@ -168,9 +201,21 @@ h2 { color:#800000; text-align:center; margin-bottom:20px; }
   </form>
 </div>
 
+<div class="product" data-name="Timberland Boots" data-price="R2,999" data-specs="Timberland waterproof boots" data-image="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png">
+  <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
+  <p><strong>Timberland Boots</strong><br>R2,999</p>
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+    <input type="hidden" name="amount" value="2999.00">
+    <input type="hidden" name="item_name" value="Timberland Boots">
+    <input type="submit" class="buy-btn" value="Buy Now">
+  </form>
+</div>
+
 <!-- Jeans -->
-<div class="product" data-name="Ducati Jeans" data-price="R1,400" data-image="491406850_1852484725571682_588279870187893033_n.jpg">
-  <img src="491406850_1852484725571682_588279870187893033_n.jpg" alt="Ducati Jeans">
+<div class="product" data-name="Ducati Jeans" data-price="R1,400" data-specs="Premium Ducati Denim" data-image="images/491406850_1852484725571682_588279870187893033_n.jpg">
+  <img src="images/491406850_1852484725571682_588279870187893033_n.jpg" alt="Ducati Jeans">
   <p><strong>Ducati Jeans</strong><br>R1,400</p>
   <form action="https://www.payfast.co.za/eng/process" method="post">
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
@@ -181,39 +226,10 @@ h2 { color:#800000; text-align:center; margin-bottom:20px; }
   </form>
 </div>
 
-</div>
-</section>
-
-<!-- Mini Cart -->
-<div id="miniCart">Cart: 0 items | <span id="sendCart">Send WhatsApp Order</span></div>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
-
-<script>
-// Modal-less mini-cart WhatsApp order
-let cart = [];
-document.querySelectorAll(".product").forEach(p => {
-  const btn = p.querySelector(".buy-btn");
-  btn.addEventListener("click", e => {
-    e.preventDefault();
-    cart.push({name: p.dataset.name, price: p.dataset.price});
-    updateCart();
-    // open PayFast in new tab
-    btn.form.submit();
-  });
-});
-
-function updateCart() {
-  const cartDiv = document.getElementById("miniCart");
-  cartDiv.innerHTML = `Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
-  document.getElementById("sendCart").onclick = () => {
-    let msg = "Hello Mr Dee, I would like to order the following:\n";
-    cart.forEach((item,i)=>{ msg += `${i+1}x ${item.name} - ${item.price}\n`; });
-    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
-  };
-}
-</script>
-
-</body>
-</html>
+<div class="product" data-name="Replay Jeans" data-price="R1,400" data-specs="Premium Replay Denim" data-image="images/491950339_1852484628905025_1160845635907717103_n.jpg">
+  <img src="images/491950339_1852484628905025_1160845635907717103_n.jpg" alt="Replay Jeans">
+  <p><strong>Replay Jeans</strong><br>R1,400</p>
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+    <input type="hidden" name="
