@@ -42,15 +42,27 @@ section h2 { color:#800000; text-align:center; }
 <p style="text-align:center;">Click any iPhone to view details or add to cart.</p>
 </section>
 
-<div class="products-grid">
+<section id="iphones">
+  <h2>iPhones</h2>
+  <div class="products-grid">
 
-  <!-- iPhone 14 Pro Max -->
-  <div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-specs="Apple iPhone 14 Pro Max, 128GB" data-image="images/iphone14promax.jpg">
-    <img src="images/iphone14promax.jpg" alt="iPhone 14 Pro Max">
-    <p><strong>iPhone 14 Pro Max</strong><br>128GB<br><span class="price">R22,999</span></p>
-  </div>
+    <div class="product">
+      <img src="images/iphone14promax.jpg" alt="iPhone 14 Pro Max">
+      <h3>iPhone 14 Pro Max</h3>
+      <p>128GB • Dynamic Island • Premium condition</p>
+      <span class="price">R19,999</span>
+      <button onclick="addToCart('iPhone 14 Pro Max', 19999)">Add to Cart</button>
+    </div>
 
-  <div class="product">
+    <div class="product">
+      <img src="images/iphone15pro.jpg" alt="iPhone 15 Pro">
+      <h3>iPhone 15 Pro</h3>
+      <p>128GB • A17 Pro • Titanium build</p>
+      <span class="price">R22,999</span>
+      <button onclick="addToCart('iPhone 15 Pro', 22999)">Add to Cart</button>
+    </div>
+
+    <div class="product">
       <img src="images/iphone20.jpg" alt="iPhone model">
       <h3>iPhone Special</h3>
       <p>Excellent condition</p>
@@ -122,6 +134,8 @@ section h2 { color:#800000; text-align:center; }
       <button onclick="addToCart('iPhone Special', 8999)">Add to Cart</button>
     </div>
 
+  </div>
+</section>
   </div>
 </section>
 </div>
