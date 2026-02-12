@@ -3,23 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sports Shoes - Mr Dee's Collection</title>
+<title>Mr Dee's Collection - Sports Shoes</title>
 <style>
 body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#007bff; color:#fff; display:flex; justify-content:center; padding:12px 0; }
+nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
 nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
 nav a:hover { color:#ffeb3b; }
 
+/* Section styling */
+section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
+section h2 { color:#800000; }
+
+/* Product Grid */
 .products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; max-width:1200px; margin:0 auto; }
-.product-link { text-decoration:none; color:inherit; }
-.product { text-align:center; background:#fff; padding:15px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-.product:hover { transform:translateY(-5px) scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); cursor:pointer; }
+.product { background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.product:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 .product img { width:100%; height:auto; border-radius:5px; }
-.price { color:#007bff; font-weight:bold; }
-section { max-width:900px; margin:40px auto 10px auto; padding:0 20px; }
-section h2 { color:#007bff; }
-a.contact-link { color:#007bff; text-decoration:none; font-weight:bold; }
-a.contact-link:hover { text-decoration:underline; }
+.price { color:#800000; font-weight:bold; margin-top:5px; display:block; }
+
+/* Quick View Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
+.modal-content { background:#f5e6e6; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
+.close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#800000; cursor:pointer; }
+.add-cart-btn { background:#800000; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
+.add-cart-btn:hover { background:#a30000; }
+
+/* Floating WhatsApp button */
+.whatsapp-btn {
+  position:fixed; bottom:20px; right:20px; background:#25D366; 
+  color:white; border-radius:50%; width:60px; height:60px; 
+  display:flex; align-items:center; justify-content:center; 
+  text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover { transform:scale(1.1); }
+
+/* Mini Cart */
+#miniCart {
+  position:fixed; bottom:100px; right:20px; background:#800000; color:white; padding:10px 15px; border-radius:8px; z-index:999;
+  cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
 </style>
 </head>
 <body>
@@ -35,24 +58,79 @@ a.contact-link:hover { text-decoration:underline; }
 
 <section>
   <h2>Sports Shoes</h2>
+  <p>Click any shoe to view details or add to cart.</p>
 </section>
 
 <div class="products-grid">
-  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Sports%20Shoe" target="_blank" class="product-link">
-    <div class="product">
-      <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
-      <p><strong>Sports Shoe</strong><br>Nike<br><span class="price">R1,999</span></p>
-    </div>
-  </a>
-  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20Boots" target="_blank" class="product-link">
-    <div class="product">
-      <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
-      <p><strong>Boots</strong><br>Timberland<br><span class="price">R2,999</span></p>
-    </div>
-  </a>
+  <div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-image="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" data-specs="Nike branded sports shoe, all sizes available">
+    <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
+    <p><strong>Nike Sports Shoe</strong><br><span class="price">R1,999</span></p>
+  </div>
+
+  <div class="product" data-name="Timberland Boots" data-price="R2,999" data-image="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" data-specs="Timberland branded waterproof boots">
+    <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
+    <p><strong>Timberland Boots</strong><br><span class="price">R2,999</span></p>
+  </div>
 </div>
 
-<p>Order via WhatsApp: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a> | Email: <a class="contact-link" href="mailto:mrdeecollection@gmail.com">mrdeecollection@gmail.com</a></p>
+<!-- Quick View Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="" style="width:100%; border-radius:8px;">
+    <h3 id="modalName"></h3>
+    <p id="modalSpecs"></p>
+    <p id="modalPrice" class="price"></p>
+    <button class="add-cart-btn">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Mini Cart -->
+<div id="miniCart">Cart: 0 items | <span id="sendCart">Send WhatsApp Order</span></div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+
+<script>
+// Modal logic
+let modal = document.getElementById("productModal");
+let modalImage = document.getElementById("modalImage");
+let modalName = document.getElementById("modalName");
+let modalSpecs = document.getElementById("modalSpecs");
+let modalPrice = document.getElementById("modalPrice");
+let closeModal = document.querySelector(".close");
+let addCartBtn = document.querySelector(".add-cart-btn");
+
+let cart = [];
+
+document.querySelectorAll(".product").forEach(product => {
+  product.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImage.src = product.dataset.image;
+    modalName.textContent = product.dataset.name;
+    modalSpecs.textContent = product.dataset.specs;
+    modalPrice.textContent = product.dataset.price;
+    addCartBtn.onclick = () => {
+      cart.push({name: product.dataset.name, price: product.dataset.price});
+      updateCart();
+      modal.style.display = "none";
+    };
+  });
+});
+
+closeModal.onclick = () => { modal.style.display = "none"; }
+window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
+
+function updateCart() {
+  document.getElementById("miniCart").innerHTML = `Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
+  document.getElementById("sendCart").onclick = () => {
+    let msg = "Hello Mr Dee, I would like to order the following:\n";
+    cart.forEach((item,i) => { msg += `${i+1}x ${item.name} - ${item.price}\n`; });
+    let url = "https://wa.me/27628952301?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
+  };
+}
+</script>
 
 </body>
 </html>
