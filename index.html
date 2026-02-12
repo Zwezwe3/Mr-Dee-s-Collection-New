@@ -3,72 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Dee's Collection - Home</title>
+<title>Mr Dee's Collection - Store</title>
 <style>
-body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
-nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
+body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; scroll-behavior: smooth; }
+nav { background:#800000; color:#fff; display:flex; justify-content:center; flex-wrap:wrap; padding:12px 0; position:sticky; top:0; z-index:100; }
+nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; padding:5px 0; }
 nav a:hover { color:#ffeb3b; }
-section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
-section h2 { color:#800000; }
-ul, ol { margin-left:20px; }
-a.contact-link { color:#800000; text-decoration:none; font-weight:bold; }
-a.contact-link:hover { text-decoration:underline; }
-
-/* Floating WhatsApp button */
-.whatsapp-btn {
-  position:fixed; bottom:20px; right:20px; background:#25D366; 
-  color:white; border-radius:50%; width:60px; height:60px; 
-  display:flex; align-items:center; justify-content:center; 
-  text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;
-  transition: transform 0.2s;
-}
+section { max-width:1200px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+section h2 { color:#800000; text-align:center; margin-bottom:20px; }
+.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; }
+.product { background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.product:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.product img { width:100%; height:auto; border-radius:5px; }
+.price { color:#800000; font-weight:bold; margin-top:5px; display:block; }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
+.modal-content { background:#f5e6e6; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
+.close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#800000; cursor:pointer; }
+.add-cart-btn { background:#800000; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
+.add-cart-btn:hover { background:#a30000; }
+.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000; transition: transform 0.2s; }
 .whatsapp-btn:hover { transform:scale(1.1); }
-
-/* Section hover animation */
-section:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+#miniCart { position:fixed; bottom:100px; right:20px; background:#800000; color:white; padding:10px 15px; border-radius:8px; z-index:999; cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+.hero { position:relative; padding:0; overflow:hidden; }
+.hero div { background:url('images/hero-banner.jpg') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; text-shadow:0 2px 5px rgba(0,0,0,0.5); }
+.hero h1 { font-size:3em; margin:0; text-align:center; }
+.hero p { font-size:1.2em; margin:10px 0; text-align:center; }
+.hero a { background:#800000; color:#fff; padding:12px 25px; border-radius:5px; text-decoration:none; font-weight:bold; margin-top:15px; box-shadow:0 4px 8px rgba(0,0,0,0.3); transition:0.3s; }
+.hero a:hover { background:#a30000; }
 </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Laptops</a>
-  <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Sports Shoes</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#laptops">Laptops</a>
+  <a href="#iphones">iPhones</a>
+  <a href="#shoes">Sports Shoes</a>
+  <a href="#jeans">Jeans</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#checkout">Checkout</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section>
-  <h2>Welcome to Mr Dee's Collection</h2>
-  <p>We connect you with trusted suppliers of quality laptops, sport shoes, and selected Apple iPhones. All products are sourced through reliable partners and shipped directly to your location.</p>
+<!-- Hero / Home -->
+<section id="home" class="hero">
+  <div>
+    <h1>Welcome to Mr Dee's Collection</h1>
+    <p>Quality Laptops, iPhones & Sports Shoes Delivered to You</p>
+    <a href="#laptops">Shop Now</a>
+  </div>
+</section>
 
-  <h2>What We Offer</h2>
-  <ul>
-    <li>Laptops for work, study, and everyday use</li>
-    <li>Branded sport shoes</li>
-    <li>Selected Apple iPhones</li>
-    <li>Direct supplier delivery</li>
-    <li>Warranty or guarantee included</li>
-  </ul>
+<!-- Laptops -->
+<section id="laptops">
+  <h2>Laptops</h2>
+  <div class="products-grid">
+    <div class="product" data-name="Lenovo ThinkPad Yoga Touch" data-price="R15,999" data-specs="16GB RAM, 512GB SSD" data-image="images/520054024_715766014603873_2695606724436205445_n.jpg">
+      <img src="images/520054024_715766014603873_2695606724436205445_n.jpg" alt="Lenovo ThinkPad Yoga Touch">
+      <p><strong>Lenovo ThinkPad Yoga Touch</strong><br>16GB RAM, 512GB SSD<br><span class="price">R15,999</span></p>
+    </div>
+    <div class="product" data-name="ASUS Laptop" data-price="R11,999" data-specs="ASUS Model" data-image="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg">
+      <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="ASUS Laptop">
+      <p><strong>ASUS Laptop</strong><br>ASUS Model<br><span class="price">R11,999</span></p>
+    </div>
+    <div class="product" data-name="HP Core i5" data-price="R9,999" data-specs="8GB RAM, 256GB SSD" data-image="images/482073298_614430021404140_4176356738869544844_n.jpg">
+      <img src="images/482073298_614430021404140_4176356738869544844_n.jpg" alt="HP Core i5">
+      <p><strong>HP Core i5</strong><br>8GB RAM, 256GB SSD<br><span class="price">R9,999</span></p>
+    </div>
+    <div class="product" data-name="MacOS Big Sur" data-price="R34,499" data-specs="16GB RAM, 512GB SSD" data-image="images/483065346_614042614776214_8801819185534169247_n.jpg">
+      <img src="images/483065346_614042614776214_8801819185534169247_n.jpg" alt="MacOS Big Sur">
+      <p><strong>MacOS Big Sur</strong><br>16GB RAM, 512GB SSD<br><span class="price">R34,499</span></p>
+    </div>
+  </div>
+</section>
 
-  <h2>How It Works</h2>
-  <ol>
-    <li>Choose your product.</li>
-    <li>Send a WhatsApp message with the model name: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a></li>
-    <li>Receive price and payment details.</li>
-    <li>Make payment.</li>
-    <li>Supplier ships directly to your door.</li>
-  </ol>
+<!-- iPhones -->
+<section id="iphones">
+  <h2>iPhones</h2>
+  <div class="products-grid">
+    <!-- Example for 9 iPhones, replace image filenames as you have -->
+    <div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-specs="128GB" data-image="images/iphone20.jpg">
+      <img src="images/iphone20.jpg" alt="iPhone 14 Pro Max">
+      <p><strong>iPhone 14 Pro Max</strong><br>128GB<br><span class="price">R22,999</span></p>
+    </div>
+    <div class="product" data-name="iPhone 12" data-price="R18,499" data-specs="128GB" data-image="images/iphone21.jpg">
+      <img src="images/iphone21.jpg" alt="iPhone 12">
+      <p><strong>iPhone 12</strong><br>128GB<br><span class="price">R18,499</span></p>
+    </div>
+    <div class="product" data-name="iPhone 14 Plus" data-price="R19,999" data-specs="128GB" data-image="images/iphone22.jpg">
+      <img src="images/iphone22.jpg" alt="iPhone 14 Plus">
+      <p><strong>iPhone 14 Plus</strong><br>128GB<br><span class="price">R19,999</span></p>
+    </div>
+    <div class="product" data-name="iPhone 15" data-price="R27,999" data-specs="128GB" data-image="images/iphone23.jpg">
+      <img src="images/iphone23.jpg" alt="iPhone 15">
+      <p><strong>iPhone 15</strong><br>128GB<br><span class="price">R27,999</span></p>
+    </div>
+    <div class="product" data-name="iPhone 14 Pro" data-price="R24,499" data-specs="256GB" data-image="images/iphone24.jpg">
+      <img src="images/iphone24.jpg" alt="iPhone 14 Pro">
+      <p><strong>iPhone 14 Pro</strong><br>256GB<br><span class="price">R24,499</span></p>
+    </div>
+    <div class="product" data-name="iPhone 15 Pro" data-price="R34,499" data-specs="256GB" data-image="images/iphone25.jpg">
+      <img src="images/iphone25.jpg" alt="iPhone 15 Pro">
+      <p><strong>iPhone 15 Pro</strong><br>256GB<br><span class="price">R34,499</span></p>
+    </div>
+    <div class="product" data-name="iPhone 15 Pro Max" data-price="R39,999" data-specs="512GB" data-image="images/iphone26.jpg">
+      <img src="images/iphone26.jpg" alt="iPhone 15 Pro Max">
+      <p><strong>iPhone 15 Pro Max</strong><br>512GB<br><span class="price">R39,999</span></p>
+    </div>
+    <div class="product" data-name="iPhone SE" data-price="R12,999" data-specs="64GB" data-image="images/iphone27.jpg">
+      <img src="images/iphone27.jpg" alt="iPhone SE">
+      <p><strong>iPhone SE</strong><br>64GB<br><span class="price">R12,999</span></p>
+    </div>
+    <div class="product" data-name="iPhone 13 Pro" data-price="R21,499" data-specs="128GB" data-image="images/iphone28.jpg">
+      <img src="images/iphone28.jpg" alt="iPhone 13 Pro">
+      <p><strong>iPhone 13 Pro</strong><br>128GB<br><span class="price">R21,499</span></p>
+    </div>
+  </div>
+</section>
 
-  <h2>Why Choose Mr Dee's Collection</h2>
-  <ul>
-    <li>Trusted local suppliers</li>
-    <li>Direct-to-door delivery</li>
-    <li>Competitive pricing</li>
-    <li>Simple WhatsApp ordering</li>
-    <li>Supplier warranty or guarantee</li>
-  </ul>
+<!-- Sports Shoes -->
+<section id="shoes">
+  <h2>Sports Shoes & Boots</h2>
+  <div class="products-grid">
+    <div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-specs="Nike branded sports shoe" data-image="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg">
+      <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg" alt="Nike Sports Shoe">
+      <p><strong>Nike Sports Shoe</strong><br>R1,999</p>
+    </div>
+    <div class="product" data-name="Timberland Boots" data-price="R2,999" data-specs="Timberland waterproof boots" data-image="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png">
+      <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
+      <p><strong>Timberland Boots</strong><br>R2,999</p>
+    </div>
+  </div>
+</section>
 
-  <p>Contact us via WhatsApp: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a>_
+<!-- Jeans -->
+<section id="jeans">
+  <h2>Jeans</h2>
+  <div class="products-grid">
+    <div class="product" data-name="Ducati Jeans" data-price="R1,400" data-specs="Premium Ducati Denim" data-image="images/491406850_1852484725571682_588279870187893033_n.jpg">
+      <img src="images/491406850_1852484725571682_588279870187893033_n.jpg" alt="Ducati Jeans">
+      <p><strong>Ducati Jeans</strong><br>R1,400</p>
+    </div>
+    <div class="product" data-name="Replay Jeans" data-price="R1,400" data-specs="Premium Replay Denim" data-image="images/491950339_1852484628905025_1160845635907717103_n.jpg">
+      <img src="images/491950339_1852484628905025_1160845635907717103_n.jpg" alt="Replay Jeans">
+      <p><strong>Replay Jeans</strong><br>R1,400</p>
+    </div>
+    <div class="product" data-name="Diesel Jeans" data-price="R1,400" data-specs="Men's Denim" data-image="images/491736509_1852484418905046_8802287681723526745_n.jpg">
+      <img src="images/491736509_1852484418905046_8802287681723526745_n.jpg" alt="Diesel Jeans">
+      <p><strong>Diesel Jeans</strong><br>R1,400</p>
+    </div>
+    <div class="product" data-name="Gstar Jeans" data-price="R1,400" data-specs="Premium Gstar Denim" data-image="images/490731517_1852484292238392_3112171941870493245_n.jpg">
+      <img src="images/490731517_1852484292238392_3112171941870493245_n.jpg" alt="Gstar Jeans">
+      <p><strong>Gstar Jeans</strong><br>R1,400</p>
+    </div>
+    <div class="product" data-name="Raw Jeans" data-price="R1,400" data-specs="Premium Raw Denim" data-image="images/490937915_1852484852238336_275008351211149739_n.jpg">
+      <img src="images/490937915_1852484852238336_275008351211149739_n.jpg" alt="Raw Jeans">
+      <p><strong>Raw Jeans</strong><br>R1,400</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="products-grid">
+    <img src="469397955_555769773945031_5435838952461765627_n.jpg" alt="Gallery item">
+    <img src="471168478_567211209467554_348796940778080797_n.jpg" alt="HP laptop package">
+    <img src="471474623_567219082800100_8411453691755803827_n (1).jpg" alt="Gallery item">
+    <img src="471327887_567219086133433_5377521008140909153_n (1).jpg" alt="Gallery item">
+    <img src="490813930_1850754289078059_4878162692189863775_n.jpg" alt="Gallery item">
+    <img src="491210622_1850754472411374_7778383605876351303_n.jpg" alt="Gallery item">
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About Mr Dee's Collection</h2>
+  <p>We connect you with trusted suppliers of laptops, iPhones, and sports shoes. All products are sourced through reliable partners and shipped directly to you.</p>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>WhatsApp: <a href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a></p>
+</section>
+
+<!-- Modal & Cart -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="" style="width:100%; border-radius:8px;">
+    <h3 id="modalName"></h3>
+    <p id="modalSpecs"></p>
+    <p id="modalPrice" class="price"></p>
+    <button class="add-cart-btn">Add to Cart</button>
+  </div>
+</div>
+<div id="miniCart">Cart: 0 items | <span id="sendCart">Send WhatsApp Order</span></div>
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+
+<script>
+let modal=document.getElementById("productModal"),
+    modalImage=document.getElementById("modalImage"),
+    modalName=document.getElementById("modalName"),
+    modalSpecs=document.getElementById("modalSpecs"),
+    modalPrice=document.getElementById("modalPrice"),
+    closeModal=document.querySelector(".close"),
+    addCartBtn=document.querySelector(".add-cart-btn"),
+    cart=[];
+document.querySelectorAll(".product").forEach(p=>{
+  p.addEventListener("click",()=>{
+    modal.style.display="flex";
+    modalImage.src=p.dataset.image;
+    modalName.textContent=p.dataset.name;
+    modalSpecs.textContent=p.dataset.specs;
+    modalPrice.textContent=p.dataset.price;
+    addCartBtn.onclick=()=>{
+      cart.push({name:p.dataset.name,price:p.dataset.price});
+      updateCart();
+      modal.style.display="none";
+    };
+  });
+});
+closeModal.onclick=()=>{modal.style.display="none"};
+window.onclick=e=>{if(e.target==modal)modal.style.display="none"};
+function updateCart(){
+  document.getElementById("miniCart").innerHTML=`Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
+  document.getElementById("sendCart").onclick=()=>{
+    let msg="Hello Mr Dee, I would like to order the following:\n";
+    cart.forEach((item,i)=>{msg+=`${i+1}x ${item.name} - ${item.price}\n`});
+    let url="https://wa.me/27628952301?text="+encodeURIComponent(msg);
+    window.open(url,"_blank");
+  };
+}
+</script>
+
+</body>
+</html>
+
