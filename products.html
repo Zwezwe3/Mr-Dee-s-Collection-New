@@ -5,43 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection - Products</title>
 <style>
-body { margin:0; font-family: Arial,sans-serif; background:#f5e6e6; color:#333; }
+body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
 nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
 nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
 nav a:hover { color:#ffeb3b; }
 
-/* Section styling */
-section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
+/* Sections */
+section { max-width:1200px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
 section h2 { color:#800000; text-align:center; }
 
 /* Product Grid */
-.products-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;
-  max-width:1200px;
-  margin:0 auto;
-  padding:20px;
-}
-.product {
-  background:#fff;
-  border-radius:10px;
-  text-align:center;
-  padding:10px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor:pointer;
-}
-.product:hover {
-  transform:scale(1.05);
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
-}
-.product img {
-  width:100%;
-  height:220px;
-  object-fit:contain;
-  border-radius:5px;
-}
+.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; }
+.product { background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.product:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.product img { width:100%; height:auto; border-radius:5px; }
 .price { color:#800000; font-weight:bold; margin-top:5px; display:block; }
 
 /* Quick View Modal */
@@ -50,6 +27,17 @@ section h2 { color:#800000; text-align:center; }
 .close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#800000; cursor:pointer; }
 .add-cart-btn { background:#800000; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
 .add-cart-btn:hover { background:#a30000; }
+
+/* Reviews Section */
+.review { background:#fff; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
+.review h4 { margin:0; color:#800000; }
+.review p { margin:5px 0; }
+.stars { color:#ffbf00; }
+
+/* Gallery */
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.gallery img { width:100%; border-radius:8px; cursor:pointer; transition:transform 0.3s; }
+.gallery img:hover { transform:scale(1.05); }
 
 /* Floating WhatsApp button */
 .whatsapp-btn {
@@ -73,7 +61,6 @@ section h2 { color:#800000; text-align:center; }
 <nav>
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
-  <a href="laptops.html">Laptops</a>
   <a href="iphones.html">iPhones</a>
   <a href="shoes.html">Sports Shoes</a>
   <a href="jeans.html">Jeans</a>
@@ -87,69 +74,86 @@ section h2 { color:#800000; text-align:center; }
 </section>
 
 <div class="products-grid">
-  <!-- Laptops -->
-  <div class="product" data-name="Laptop 1" data-price="R15,999" data-specs="Intel i7, 16GB RAM, 512GB SSD" data-image="https://www.firstshop.co.za/cdn/shop/files/pv15250-rplu-007-p-pro-windows-laptops-1199459722.jpg?v=1761304158&width=1000">
-    <img src="https://www.firstshop.co.za/cdn/shop/files/pv15250-rplu-007-p-pro-windows-laptops-1199459722.jpg?v=1761304158&width=1000" alt="Laptop 1">
-    <p><strong>Laptop 1</strong><br>Intel i7, 16GB RAM, 512GB SSD<br><span class="price">R15,999</span></p>
-  </div>
-  <div class="product" data-name="Laptop 2" data-price="R9,999" data-specs="Intel i5, 8GB RAM, 256GB SSD" data-image="https://www.firstshop.co.za/cdn/shop/files/82vg00upsa-windows-laptops-1149797247.jpg?v=1742413503&width=1000">
-    <img src="https://www.firstshop.co.za/cdn/shop/files/82vg00upsa-windows-laptops-1149797247.jpg?v=1742413503&width=1000" alt="Laptop 2">
-    <p><strong>Laptop 2</strong><br>Intel i5, 8GB RAM, 256GB SSD<br><span class="price">R9,999</span></p>
-  </div>
-  <div class="product" data-name="Laptop 3" data-price="R12,499" data-specs="AMD Ryzen 5, 16GB RAM, 512GB SSD" data-image="https://www.chavda.com/cdn/shop/files/UX3405CA_OU93210BL0X_1_0283.webp?v=1770320187">
-    <img src="https://www.chavda.com/cdn/shop/files/UX3405CA_OU93210BL0X_1_0283.webp?v=1770320187" alt="Laptop 3">
-    <p><strong>Laptop 3</strong><br>AMD Ryzen 5, 16GB RAM, 512GB SSD<br><span class="price">R12,499</span></p>
-  </div>
-  <div class="product" data-name="Laptop 4" data-price="R11,999" data-specs="ASUS Model" data-image="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg">
-    <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="Laptop 4">
-    <p><strong>Laptop 4</strong><br>ASUS Model<br><span class="price">R11,999</span></p>
-  </div>
 
-  <!-- iPhones -->
-  <div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-specs="Premium Apple Smartphone" data-image="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg">
-    <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max">
-    <p><strong>iPhone 14 Pro Max</strong><br>R22,999</p>
-  </div>
-  <div class="product" data-name="iPhone 16 Pro" data-price="R34,499" data-specs="Premium Apple Smartphone" data-image="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp">
-    <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp" alt="iPhone 16 Pro">
-    <p><strong>iPhone 16 Pro</strong><br>R34,499</p>
-  </div>
+<!-- Laptops -->
+<div class="product" data-name="Lenovo ThinkPad Yoga Touch" data-price="R15,999" data-specs="Lenovo ThinkPad Yoga Touch, 16GB RAM, 512GB SSD" data-image="images/520054024_715766014603873_2695606724436205445_n.jpg">
+  <img src="images/520054024_715766014603873_2695606724436205445_n.jpg" alt="Lenovo ThinkPad Yoga Touch">
+  <p><strong>Lenovo ThinkPad Yoga Touch</strong><br>16GB RAM, 512GB SSD<br><span class="price">R15,999</span></p>
+</div>
+<div class="product" data-name="Asus" data-price="R12,499" data-specs="Asus Laptop, 8GB RAM, 256GB SSD" data-image="images/481942540_614430458070763_4143823787333632966_n.jpg">
+  <img src="images/481942540_614430458070763_4143823787333632966_n.jpg" alt="Asus">
+  <p><strong>Asus</strong><br>8GB RAM, 256GB SSD<br><span class="price">R12,499</span></p>
+</div>
+<div class="product" data-name="HP Core i5" data-price="R9,999" data-specs="HP Core i5 Laptop, 8GB RAM, 256GB SSD" data-image="images/482073298_614430021404140_4176356738869544844_n.jpg">
+  <img src="images/482073298_614430021404140_4176356738869544844_n.jpg" alt="HP Core i5">
+  <p><strong>HP Core i5</strong><br>8GB RAM, 256GB SSD<br><span class="price">R9,999</span></p>
+</div>
+<div class="product" data-name="MacOS Big Sur" data-price="R34,499" data-specs="Apple MacBook with MacOS Big Sur, 16GB RAM, 512GB SSD" data-image="images/483065346_614042614776214_8801819185534169247_n.jpg">
+  <img src="images/483065346_614042614776214_8801819185534169247_n.jpg" alt="MacOS Big Sur">
+  <p><strong>MacOS Big Sur</strong><br>16GB RAM, 512GB SSD<br><span class="price">R34,499</span></p>
+</div>
 
-  <!-- Sports Shoes -->
-  <div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-specs="Nike branded sports shoe" data-image="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
-    <img src="https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Nike Sports Shoe">
-    <p><strong>Nike Sports Shoe</strong><br>R1,999</p>
-  </div>
-  <div class="product" data-name="Timberland Boots" data-price="R2,999" data-specs="Timberland waterproof boots" data-image="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png">
-    <img src="https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png" alt="Timberland Boots">
-    <p><strong>Timberland Boots</strong><br>R2,999</p>
-  </div>
+<!-- iPhones -->
+<div class="product" data-name="iPhone 1" data-price="R22,999" data-specs="iPhone 14 Pro Max" data-image="images/iphone1.jpg">
+  <img src="images/iphone1.jpg" alt="iPhone 1">
+  <p><strong>iPhone 1</strong><br>iPhone 14 Pro Max<br><span class="price">R22,999</span></p>
+</div>
+<div class="product" data-name="iPhone 2" data-price="R34,499" data-specs="iPhone 16 Pro" data-image="images/iphone2.jpg">
+  <img src="images/iphone2.jpg" alt="iPhone 2">
+  <p><strong>iPhone 2</strong><br>iPhone 16 Pro<br><span class="price">R34,499</span></p>
+</div>
+
+<!-- Shoes / Boots -->
+<div class="product" data-name="Nike Sports Shoe" data-price="R1,999" data-specs="Nike branded sports shoe, all sizes available" data-image="images/nike_shoe.jpg">
+  <img src="images/nike_shoe.jpg" alt="Nike Sports Shoe">
+  <p><strong>Nike Sports Shoe</strong><br>R1,999</p>
+</div>
+<div class="product" data-name="Timberland Boots" data-price="R2,999" data-specs="Timberland branded waterproof boots" data-image="images/timberland_boots.jpg">
+  <img src="images/timberland_boots.jpg" alt="Timberland Boots">
+  <p><strong>Timberland Boots</strong><br>R2,999</p>
+</div>
 
 <!-- Jeans -->
 <div class="product" data-name="Ducati Jeans" data-price="R1,400" data-specs="Premium Ducati Denim" data-image="images/491406850_1852484725571682_588279870187893033_n.jpg">
   <img src="images/491406850_1852484725571682_588279870187893033_n.jpg" alt="Ducati Jeans">
-  <p><strong>Ducati Jeans</strong><br>Premium Ducati Denim<br>R1,400</p>
+  <p><strong>Ducati Jeans</strong><br>R1,400</p>
 </div>
-
 <div class="product" data-name="Replay Jeans" data-price="R1,400" data-specs="Premium Replay Denim" data-image="images/491950339_1852484628905025_1160845635907717103_n.jpg">
   <img src="images/491950339_1852484628905025_1160845635907717103_n.jpg" alt="Replay Jeans">
-  <p><strong>Replay Jeans</strong><br>Premium Replay Denim<br>R1,400</p>
+  <p><strong>Replay Jeans</strong><br>R1,400</p>
 </div>
-
-<div class="product" data-name="Diesel Jeans" data-price="R1,400" data-specs="Premium Diesel Denim" data-image="images/491736509_1852484418905046_8802287681723526745_n.jpg">
-  <img src="images/491736509_1852484418905046_8802287681723526745_n.jpg" alt="Diesel Jeans">
-  <p><strong>Diesel Jeans</strong><br>Premium Diesel Denim<br>R1,400</p>
+<div class="product" data-name="Diesel Jeans" data-price="R1,400" data-specs="Premium Diesel Denim" data-image="images/491736509_1852484418905046_880228768172352645_n.jpg">
+  <img src="images/491736509_1852484418905046_880228768172352645_n.jpg" alt="Diesel Jeans">
+  <p><strong>Diesel Jeans</strong><br>R1,400</p>
 </div>
-
 <div class="product" data-name="Gstar Jeans" data-price="R1,400" data-specs="Premium Gstar Denim" data-image="images/490731517_1852484292238392_3112171941870493245_n.jpg">
   <img src="images/490731517_1852484292238392_3112171941870493245_n.jpg" alt="Gstar Jeans">
-  <p><strong>Gstar Jeans</strong><br>Premium Gstar Denim<br>R1,400</p>
+  <p><strong>Gstar Jeans</strong><br>R1,400</p>
 </div>
-
 <div class="product" data-name="Raw Jeans" data-price="R1,400" data-specs="Premium Raw Denim" data-image="images/490937915_1852484852238336_275008351211149739_n.jpg">
   <img src="images/490937915_1852484852238336_275008351211149739_n.jpg" alt="Raw Jeans">
-  <p><strong>Raw Jeans</strong><br>Premium Raw Denim<br>R1,400</p>
+  <p><strong>Raw Jeans</strong><br>R1,400</p>
 </div>
+
+</div>
+
+<!-- Reviews Section -->
+<section>
+<h2>Customer Reviews</h2>
+<div class="review"><h4>Thabo M.</h4><p class="stars">★★★★★</p><p>Excellent service and fast delivery. Loved my laptop!</p></div>
+<div class="review"><h4>Aisha K.</h4><p class="stars">★★★★☆</p><p>Jeans fit perfectly. Great quality.</p></div>
+<div class="review"><h4>Sipho N.</h4><p class="stars">★★★★★</p><p>Nike shoes arrived quickly. Very satisfied.</p></div>
+</section>
+
+<!-- Gallery Section -->
+<section>
+<h2>Gallery</h2>
+<div class="gallery">
+  <img src="images/481970325_611442891702853_2021659528489668591_n.jpg" alt="Packaged Laptops">
+  <img src="images/laptop1.jpg" alt="Laptop Lifestyle">
+  <img src="images/iphone1.jpg" alt="iPhone Lifestyle">
+</div>
+</section>
 
 <!-- Quick View Modal -->
 <div class="modal" id="productModal">
@@ -170,7 +174,7 @@ section h2 { color:#800000; text-align:center; }
 <a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
 
 <script>
-// Modal & Cart Logic
+// Modal logic
 let modal = document.getElementById("productModal");
 let modalImage = document.getElementById("modalImage");
 let modalName = document.getElementById("modalName");
@@ -185,7 +189,7 @@ document.querySelectorAll(".product").forEach(product => {
     modal.style.display = "flex";
     modalImage.src = product.dataset.image;
     modalName.textContent = product.dataset.name;
-    modalSpecs.textContent = product.dataset.specs || '';
+    modalSpecs.textContent = product.dataset.specs;
     modalPrice.textContent = product.dataset.price;
     addCartBtn.onclick = () => {
       cart.push({name: product.dataset.name, price: product.dataset.price});
@@ -195,16 +199,17 @@ document.querySelectorAll(".product").forEach(product => {
   });
 });
 
-closeModal.onclick = () => modal.style.display = "none";
-window.onclick = e => { if(e.target==modal) modal.style.display = "none"; }
+closeModal.onclick = () => { modal.style.display = "none"; }
+window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
 
 function updateCart() {
   document.getElementById("miniCart").innerHTML = `Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
   document.getElementById("sendCart").onclick = () => {
     let msg = "Hello Mr Dee, I would like to order the following:\n";
-    cart.forEach((item,i)=>{ msg += `${i+1}x ${item.name} - ${item.price}\n`; });
-    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
-  }
+    cart.forEach((item,i) => { msg += `${i+1}x ${item.name} - ${item.price}\n`; });
+    let url = "https://wa.me/27628952301?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
+  };
 }
 </script>
 
