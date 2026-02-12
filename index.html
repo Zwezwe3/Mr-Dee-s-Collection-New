@@ -6,14 +6,27 @@
 <title>Mr Dee's Collection - Home</title>
 <style>
 body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#007bff; color:#fff; display:flex; justify-content:center; padding:12px 0; }
+nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
 nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
 nav a:hover { color:#ffeb3b; }
-section { max-width:900px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
-section h2 { color:#007bff; }
+section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+section h2 { color:#800000; }
 ul, ol { margin-left:20px; }
-a.contact-link { color:#007bff; text-decoration:none; font-weight:bold; }
+a.contact-link { color:#800000; text-decoration:none; font-weight:bold; }
 a.contact-link:hover { text-decoration:underline; }
+
+/* Floating WhatsApp button */
+.whatsapp-btn {
+  position:fixed; bottom:20px; right:20px; background:#25D366; 
+  color:white; border-radius:50%; width:60px; height:60px; 
+  display:flex; align-items:center; justify-content:center; 
+  text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover { transform:scale(1.1); }
+
+/* Section hover animation */
+section:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 </style>
 </head>
 <body>
@@ -60,6 +73,9 @@ a.contact-link:hover { text-decoration:underline; }
 
   <p>Contact us via WhatsApp: <a class="contact-link" href="https://wa.me/27628952301" target="_blank">+27 62 895 2301</a> or Email: <a class="contact-link" href="mailto:mrdeecollection@gmail.com">mrdeecollection@gmail.com</a></p>
 </section>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
 
 </body>
 </html>
