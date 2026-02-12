@@ -180,24 +180,7 @@ const iphones=[
 ["iPhone 13 Pro","R17,999","iphone27.jpg"],
 ["iPhone 13","R16,499","iphone28.jpg"]
 ];
-<div class="products-grid">
-  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20iPhone%201" target="_blank" class="product-link">
-    <div class="product">
-      <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg" alt="iPhone 14 Pro Max">
-      <p><strong>iPhone 1</strong><br>iPhone 14 Pro Max<br><span class="price">R22,999</span></p>
-    </div>
-  </a>
-  <a href="https://wa.me/27628952301?text=Hello%2C%20I%20want%20to%20order%20iPhone%202" target="_blank" class="product-link">
-    <div class="product">
-      <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp" alt="iPhone 16 Pro">
-      <p><strong>iPhone 2</strong><br>iPhone 16 Pro<br><span class="price">R34,499</span></p>
-    </div> 
-document.write(
-  iphones.map(p=>`
-  <div class="product" data-name="${p[0]}" data-price="${p[1]}" data-image="images/${p[2]}">
-    <img src="images/${p[2]}">
-    <p><strong>${p[0]}</strong><br>${p[1]}</p>
-  </div>
+
   `).join("")
 );
 </script>
