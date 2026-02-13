@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection - iPhones</title>
+<link rel="stylesheet" href="style.css">
 <style>
 body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
 nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; }
@@ -25,12 +26,12 @@ section h2 { color:#800000; text-align:center; }
 .whatsapp-btn:hover { transform:scale(1.1); }
 #miniCart { position:fixed; bottom:100px; right:20px; background:#800000; color:white; padding:10px 15px; border-radius:8px; z-index:999; cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
 </style>
- <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+
 <nav>
   <a href="index.html">Home</a>
-  <a href="laptops.html">Laptops</a>
+  <a href="products.html">Store</a>
   <a href="iphones.html">iPhones</a>
   <a href="shoes.html">Sports Shoes</a>
   <a href="jeans.html">Jeans</a>
@@ -44,8 +45,8 @@ section h2 { color:#800000; text-align:center; }
 </section>
 
 <section id="iphones">
-  <h2>iPhones</h2>
   <div class="products-grid">
+
     <div class="product" data-name="iPhone 14 Pro Max" data-price="R22,999" data-specs="Apple iPhone 14 Pro Max, 128GB" data-image="images/iphone20.jpg">
       <img src="images/iphone20.jpg" alt="iPhone 14 Pro Max">
       <p><strong>iPhone 14 Pro Max</strong><br>128GB<br><span class="price">R22,999</span></p>
@@ -83,13 +84,13 @@ section h2 { color:#800000; text-align:center; }
 
     <div class="product" data-name="iPhone SE" data-price="R12,999" data-specs="Apple iPhone SE, 64GB" data-image="images/iphone26.jpg">
       <img src="images/iphone26.jpg" alt="iPhone SE">
-      <p><strong>iPhone SE</strong><br>64GB<br><span class="price">R12,999</sp
+      <p><strong>iPhone SE</strong><br>64GB<br><span class="price">R12,999</span></p>
+    </div>
+
   </div>
-
 </section>
-</div>
 
-<!-- Modal, mini-cart, WhatsApp -->
+<!-- Modal -->
 <div class="modal" id="productModal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -110,5 +111,6 @@ document.querySelectorAll(".product").forEach(p=>{p.addEventListener("click",()=
 closeModal.onclick=()=>{modal.style.display="none"};window.onclick=e=>{if(e.target==modal)modal.style.display="none"};
 function updateCart(){document.getElementById("miniCart").innerHTML=`Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;document.getElementById("sendCart").onclick=()=>{let msg="Hello Mr Dee, I would like to order the following:\n";cart.forEach((item,i)=>{msg+=`${i+1}x ${item.name} - ${item.price}\n`;});let url="https://wa.me/27628952301?text="+encodeURIComponent(msg);window.open(url,"_blank")}}
 </script>
+
 </body>
 </html>
