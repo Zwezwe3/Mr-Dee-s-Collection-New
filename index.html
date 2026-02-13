@@ -7,98 +7,138 @@
 
 <style>
 body {
-  margin: 0;
+  margin:0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  background: linear-gradient(120deg,#f6f8ff,#eef9f3);
+  color:#333;
 }
 
 /* Navigation */
 nav {
-  background: #111;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  background:#1f1f1f;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:14px 0;
 }
-
 nav a {
-  color: white;
-  padding: 14px 18px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  color:white;
+  text-decoration:none;
+  margin:0 18px;
+  font-weight:bold;
 }
-
 nav a:hover {
-  background: #444;
+  color:#4CAF50;
 }
 
-/* Hero Section */
+/* Hero Banner */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
+  background: linear-gradient(120deg,#4CAF50,#2b7cff);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
-
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size:42px;
+  margin-bottom:10px;
 }
-
 .hero p {
-  font-size: 1.2em;
-  max-width: 700px;
-  margin: auto;
-  opacity: 0.9;
+  font-size:18px;
+  margin-bottom:25px;
+}
+.hero a {
+  background:white;
+  color:#333;
+  padding:12px 25px;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
+}
+.hero a:hover {
+  background:#f1f1f1;
 }
 
-.cta-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  background: #ff6600;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: transform 0.2s, background 0.3s;
-}
-
-.cta-btn:hover {
-  background: #ff8533;
-  transform: scale(1.05);
+/* Section */
+section {
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
 }
 
 /* Features */
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 50px 30px;
-  background: rgba(0,0,0,0.25);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
-
 .feature-box {
-  background: rgba(255,255,255,0.08);
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.feature-box:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.feature-box h3 {
+  margin-bottom:10px;
 }
 
-.feature-box h3 {
-  margin-bottom: 10px;
-  color: #ffcc00;
+/* Categories */
+.categories {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.category {
+  background:white;
+  padding:30px 20px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  text-decoration:none;
+  color:#333;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.category:hover {
+  transform:scale(1.05);
 }
 
 /* Footer */
 footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  background:#1f1f1f;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:30px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  z-index:1000;
 }
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -113,35 +153,49 @@ footer {
   <a href="contact.html">Contact</a>
 </nav>
 
-<section class="hero">
-  <h1>Mr Dee's Collection</h1>
-  <p>
-    Quality laptops, premium smartphones, stylish footwear, and fashionable jeans —
-    all in one trusted store. Simple ordering, reliable products, and fast service.
-  </p>
-  <a href="products.html" class="cta-btn">View Products</a>
+<div class="hero">
+  <h1>Mr Dee’s Collection</h1>
+  <p>Quality Tech, Footwear & Fashion Delivered to Your Door</p>
+  <a href="products.html">Browse Products</a>
+</div>
+
+<section>
+  <h2 style="text-align:center;">Why Shop With Us</h2>
+  <div class="features">
+    <div class="feature-box">
+      <h3>Trusted Suppliers</h3>
+      <p>Carefully sourced products from reliable partners.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Fast Delivery</h3>
+      <p>Direct-to-door shipping across South Africa.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Secure Payments</h3>
+      <p>Safe checkout or WhatsApp ordering.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Warranty Included</h3>
+      <p>Products come with supplier guarantee.</p>
+    </div>
+  </div>
 </section>
 
-<section class="features">
-  <div class="feature-box">
-    <h3>Quality Products</h3>
-    <p>Carefully selected laptops, phones, shoes, and clothing from trusted suppliers.</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Easy Ordering</h3>
-    <p>Simple checkout and WhatsApp support for fast, stress-free purchases.</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Trusted Service</h3>
-    <p>Reliable customer support and honest pricing with no hidden surprises.</p>
+<section>
+  <h2 style="text-align:center;">Shop by Category</h2>
+  <div class="categories">
+    <a class="category" href="laptops.html">💻 Laptops</a>
+    <a class="category" href="iphones.html">📱 iPhones</a>
+    <a class="category" href="shoes.html">👟 Sports Shoes</a>
+    <a class="category" href="jeans.html">👖 Jeans</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Mr Dee's Collection — All Rights Reserved
+  <p>© 2026 Mr Dee’s Collection. All rights reserved.</p>
 </footer>
+
+<a href="https://wa.me/27628952301" class="whatsapp-btn" target="_blank">✉</a>
 
 </body>
 </html>
