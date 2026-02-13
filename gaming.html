@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr Dee's Collection - Gaming Laptops</title>
+
+<style>
+body { margin:0; font-family: Arial,sans-serif; background:#f0f0f0; color:#333; }
+
+nav {
+  background:#333;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:12px 0;
+}
+nav a {
+  color:#fff;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+}
+nav a:hover { color:#ffcc00; }
+
+section {
+  max-width:1200px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+section h2 {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.products-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.product {
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  text-align:center;
+  padding:10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
+}
+.product:hover {
+  transform:scale(1.05);
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.product img {
+  width:100%;
+  height:auto;
+  border-radius:5px;
+}
+
+.price {
+  color:#007BFF;
+  font-weight:bold;
+  margin-top:5px;
+  display:block;
+}
+
+.buy-btn, .add-cart-btn {
+  background:#007BFF;
+  color:white;
+  padding:10px 15px;
+  border:none;
+  border-radius:5px;
+  margin-top:5px;
+  cursor:pointer;
+  width:90%;
+}
+.buy-btn:hover, .add-cart-btn:hover {
+  background:#0056b3;
+}
+
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-content {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  max-width:500px;
+  width:90%;
+  position:relative;
+  text-align:center;
+}
+
+.close {
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:24px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.whatsapp-btn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:30px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+#miniCart {
+  position:fixed;
+  bottom:100px;
+  right:20px;
+  background:#007BFF;
+  color:white;
+  padding:10px 15px;
+  border-radius:8px;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="gaming.html">Gaming</a>
+  <a href="iphones.html">iPhones</a>
+  <a href="shoes.html">Sports Shoes</a>
+  <a href="jeans.html">Jeans</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Gaming Laptops</h2>
+<p style="text-align:center;">High-performance machines for gaming, design, and heavy workloads.</p>
+
+<div class="products-grid">
+
+<div class="product"
+data-name="Asus ROG Strix G16"
+data-price="R32,999"
+data-specs="Intel i7, 16GB RAM, RTX 4060, 1TB SSD"
+data-image="https://dlcdnwebimgs.asus.com/gain/rog-strix-g16.png">
+<img src="https://dlcdnwebimgs.asus.com/gain/rog-strix-g16.png" alt="Asus ROG Strix">
+<p><strong>Asus ROG Strix G16</strong><br>R32,999</p>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="product"
+data-name="MSI Katana 15"
+data-price="R29,499"
+data-specs="Intel i7, 16GB RAM, RTX 4050, 512GB SSD"
+data-image="https://asset.msi.com/katana15.png">
+<img src="https://asset.msi.com/katana15.png" alt="MSI Katana">
+<p><strong>MSI Katana 15</strong><br>R29,499</p>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="product"
+data-name="Acer Nitro 5"
+data-price="R21,999"
+data-specs="Intel i5, 16GB RAM, RTX 3050, 512GB SSD"
+data-image="https://images.acer.com/nitro5.png">
+<img src="https://images.acer.com/nitro5.png" alt="Acer Nitro 5">
+<p><strong>Acer Nitro 5</strong><br>R21,999</p>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="product"
+data-name="Lenovo Legion 5"
+data-price="R26,999"
+data-specs="Ryzen 7, 16GB RAM, RTX 3060, 512GB SSD"
+data-image="https://p1-ofp.static.pub/legion5.png">
+<img src="https://p1-ofp.static.pub/legion5.png" alt="Lenovo Legion 5">
+<p><strong>Lenovo Legion 5</strong><br>R26,999</p>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" style="width:100%; border-radius:8px;">
+    <h3 id="modalName"></h3>
+    <p id="modalSpecs"></p>
+    <p id="modalPrice" class="price"></p>
+    <button class="add-cart-btn">Add to Cart</button>
+  </div>
+</div>
+
+<div id="miniCart">Cart: 0 items</div>
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+
+<script>
+let modal=document.getElementById("productModal"),
+modalImage=document.getElementById("modalImage"),
+modalName=document.getElementById("modalName"),
+modalSpecs=document.getElementById("modalSpecs"),
+modalPrice=document.getElementById("modalPrice"),
+closeModal=document.querySelector(".close"),
+addCartBtn=document.querySelector(".modal .add-cart-btn"),
+cart=[];
+
+document.querySelectorAll(".product").forEach(p=>{
+  p.addEventListener("click",()=>{
+    modal.style.display="flex";
+    modalImage.src=p.dataset.image;
+    modalName.textContent=p.dataset.name;
+    modalSpecs.textContent=p.dataset.specs;
+    modalPrice.textContent=p.dataset.price;
+    addCartBtn.onclick=()=>{
+      cart.push({name:p.dataset.name,price:p.dataset.price});
+      updateCart();
+      modal.style.display="none";
+    }
+  });
+});
+
+closeModal.onclick=()=>modal.style.display="none";
+window.onclick=e=>{if(e.target==modal)modal.style.display="none"};
+
+function updateCart(){
+  document.getElementById("miniCart").textContent=
+    "Cart: " + cart.length + " item(s)";
+}
+</script>
+
+</body>
+</html>
