@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection</title>
-<link rel="stylesheet" href="style.css">
+
 <style>
 body {
   margin:0;
@@ -27,48 +27,46 @@ nav a {
   margin:0 18px;
   font-weight:bold;
 }
-nav a:hover {
-  color:#4CAF50;
+nav a:hover { color:#4CAF50; }
+
+/* Banner */
+.site-banner {
+  text-align:center;
+  padding:20px;
+  background:white;
+}
+.site-banner img {
+  max-width:100%;
+  height:auto;
 }
 
-/* Hero Banner using banner image */
+/* Hero */
 .hero {
-  background: url('logo-banner.png') center/cover no-repeat;
+  background: linear-gradient(120deg,#4CAF50,#2b7cff);
   color:white;
   text-align:center;
-  padding:120px 20px;
-  border-radius:12px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  padding:80px 20px;
 }
-.hero h1 {
-  font-size:48px;
-  margin-bottom:15px;
-}
-.hero p {
-  font-size:20px;
-  margin-bottom:30px;
-}
+.hero h1 { font-size:42px; margin-bottom:10px; }
+.hero p { font-size:18px; margin-bottom:25px; }
 .hero a {
-  background:#fff;
+  background:white;
   color:#333;
-  padding:15px 30px;
-  font-size:18px;
+  padding:12px 25px;
+  text-decoration:none;
   border-radius:30px;
   font-weight:bold;
-  text-decoration:none;
-  transition:0.3s;
-}
-.hero a:hover {
-  background:#f1f1f1;
 }
 
-/* Features Section */
-section.features {
+/* Sections */
+section {
   max-width:1100px;
   margin:40px auto;
   padding:20px;
 }
-.features-grid {
+
+/* Features */
+.features {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
@@ -79,24 +77,13 @@ section.features {
   border-radius:12px;
   text-align:center;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-.feature-box:hover {
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-.feature-box h3 {
-  margin-bottom:10px;
 }
 
-/* Categories Section */
+/* Categories */
 .categories {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
 }
 .category {
   background:white;
@@ -107,10 +94,6 @@ section.features {
   text-decoration:none;
   color:#333;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-.category:hover {
-  transform:scale(1.05);
 }
 
 /* Footer */
@@ -122,7 +105,7 @@ footer {
   margin-top:40px;
 }
 
-/* WhatsApp button */
+/* WhatsApp */
 .whatsapp-btn {
   position:fixed;
   bottom:20px;
@@ -138,16 +121,17 @@ footer {
   text-decoration:none;
   font-size:30px;
   box-shadow:0 4px 8px rgba(0,0,0,0.2);
-  z-index:1000;
-}
-.whatsapp-btn:hover {
-  transform:scale(1.1);
 }
 </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
+<!-- Banner now in correct place -->
+<header class="site-banner">
+  <img src="logo-banner.png" alt="Mr Dee's Collection">
+</header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
@@ -160,17 +144,15 @@ footer {
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Hero Banner -->
-<section class="hero">
+<div class="hero">
   <h1>Mr Dee’s Collection</h1>
-  <p>Smart Tech. Clean Style. Honest Prices. Delivered to Your Doorstep.</p>
-  <a href="products.html">Shop Now</a>
-</section>
+  <p>Quality Tech, Footwear & Fashion Delivered to Your Door</p>
+  <a href="products.html">Browse Products</a>
+</div>
 
-<!-- Features -->
-<section class="features">
+<section>
   <h2 style="text-align:center;">Why Shop With Us</h2>
-  <div class="features-grid">
+  <div class="features">
     <div class="feature-box">
       <h3>Trusted Suppliers</h3>
       <p>Carefully sourced products from reliable partners.</p>
@@ -190,7 +172,6 @@ footer {
   </div>
 </section>
 
-<!-- Categories -->
 <section>
   <h2 style="text-align:center;">Shop by Category</h2>
   <div class="categories">
@@ -201,12 +182,10 @@ footer {
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <p>© 2026 Mr Dee’s Collection. All rights reserved.</p>
 </footer>
 
-<!-- WhatsApp button -->
 <a href="https://wa.me/27628952301" class="whatsapp-btn" target="_blank">✉</a>
 
 </body>
