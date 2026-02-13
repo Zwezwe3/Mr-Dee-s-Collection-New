@@ -4,70 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection - Home</title>
-<style>
-body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#800000; color:#fff; display:flex; justify-content:center; padding:12px 0; flex-wrap:wrap; }
-nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
-nav a:hover { color:#ffeb3b; }
-section { max-width:900px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
-section h2 { color:#800000; }
-ul, ol { margin-left:20px; }
-a.contact-link { color:#800000; text-decoration:none; font-weight:bold; }
-a.contact-link:hover { text-decoration:underline; }
-
-/* Floating WhatsApp button */
-.whatsapp-btn {
-  position:fixed; bottom:20px; right:20px; background:#25D366; 
-  color:white; border-radius:50%; width:60px; height:60px; 
-  display:flex; align-items:center; justify-content:center; 
-  text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;
-  transition: transform 0.2s;
-}
-.whatsapp-btn:hover { transform:scale(1.1); }
-
-/* Section hover animation */
-section:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
-</style>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
   <a href="index.html">Home</a>
   <a href="products.html">Store</a>
+  <a href="laptops.html">Laptops</a>
   <a href="iphones.html">iPhones</a>
   <a href="shoes.html">Sports Shoes</a>
   <a href="jeans.html">Jeans</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="checkout.html">Checkout</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>Welcome to Mr Dee's Collection</h2>
-  <p>We connect you with trusted suppliers of quality laptops, sport shoes, and selected Apple iPhones. All products are sourced through reliable partners and shipped directly to your location.</p>
+<!-- HERO SECTION -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Mr Dee's Collection</h1>
+    <p>Quality laptops, iPhones, footwear and fashion — delivered to your door.</p>
+    <a href="products.html" class="btn-primary">Shop Now</a>
+  </div>
+</header>
 
+<!-- MAIN CONTENT -->
+<section class="content">
+  <h2>Welcome to Mr Dee's Collection</h2>
+  <p>
+    We connect you with trusted suppliers of quality laptops, sport shoes, jeans, and selected Apple iPhones. 
+    All products are sourced through reliable partners and shipped directly to your location.
+  </p>
+</section>
+
+<section class="content">
   <h2>What We Offer</h2>
   <ul>
     <li>Laptops for work, study, and everyday use</li>
-    <li>Branded sport shoes</li>
+    <li>Branded sport shoes and boots</li>
+    <li>Premium denim jeans</li>
     <li>Selected Apple iPhones</li>
     <li>Direct supplier delivery</li>
     <li>Warranty or guarantee included</li>
   </ul>
+</section>
 
+<section class="content">
   <h2>How It Works</h2>
   <ol>
-    <li>Choose your product.</li>
-    <li>Send a WhatsApp message with the model name:
-      <a class="contact-link" href="https://wa.me/27628952301" target="_blank">
-        +27 62 895 2301
-      </a>
-    </li>
+    <li>Choose your product from the store.</li>
+    <li>Click Buy or send a WhatsApp message with the model name.</li>
     <li>Receive price and payment details.</li>
     <li>Make payment.</li>
     <li>Supplier ships directly to your door.</li>
   </ol>
+</section>
 
+<section class="content">
   <h2>Why Choose Mr Dee's Collection</h2>
   <ul>
     <li>Trusted local suppliers</li>
@@ -78,7 +73,10 @@ section:hover { transform: translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.
   </ul>
 </section>
 
-<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">
+  &#x2709;
+</a>
 
 </body>
 </html>
