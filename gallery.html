@@ -4,41 +4,117 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection - Gallery</title>
+
 <style>
-body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#800000; color:#fff; display:flex; justify-content:center; flex-wrap:wrap; padding:12px 0;}
-nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
-nav a:hover { color:#ffeb3b; }
-section { max-width:1200px; margin:40px auto; padding:20px; background:#f5e6e6; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
-section h2 { color:#800000; text-align:center; margin-bottom:20px; }
-.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-.gallery-grid img { width:100%; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
-.gallery-grid img:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#f6f8ff,#eef9f3);
+  color:#333;
+}
+
+/* Navigation */
+nav {
+  background:#222;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:12px 0;
+}
+nav a {
+  color:#fff;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+}
+nav a:hover {
+  color:#4CAF50;
+}
+
+/* Section */
+section {
+  max-width:1200px;
+  margin:40px auto;
+  padding:20px;
+  background:#ffffff;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+section h2 {
+  text-align:center;
+  margin-bottom:10px;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.gallery-grid img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
+}
+
+.gallery-grid img:hover {
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
 /* Floating WhatsApp button */
-.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000; transition: transform 0.2s; }
-.whatsapp-btn:hover { transform:scale(1.1); }
+.whatsapp-btn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:30px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  z-index:1000;
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover {
+  transform:scale(1.1);
+}
 </style>
-  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="products.html">Laptops</a>
+  <a href="products.html">Products</a>
+  <a href="laptops.html">Laptops</a>
   <a href="iphones.html">iPhones</a>
   <a href="shoes.html">Sports Shoes</a>
+  <a href="jeans.html">Jeans</a>
   <a href="gallery.html">Gallery</a>
-  <a href="checkout.html">Checkout</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
 
 <section>
   <h2>Gallery</h2>
-  <p style="text-align:center;">A glimpse of our products and packages ready for delivery.</p>
- <section id="gallery">
-  <div class="collapsible-header">Gallery</div>
-  <div class="collapsible-content products-grid">
+  <p style="text-align:center;">
+    A glimpse of our products and packages ready for delivery.
+  </p>
+
+  <div class="gallery-grid">
     <img src="images/469397955_555769773945031_5435838952461765627_n.jpg" alt="Gallery item">
     <img src="images/471168478_567211209467554_348796940778080797_n.jpg" alt="HP laptop package">
     <img src="images/471474623_567219082800100_8411453691755803827_n.jpg" alt="Gallery item">
