@@ -4,27 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Dee's Collection - Laptops</title>
-<link rel="stylesheet" href="style.css">
 <style>
-body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
-nav { background: linear-gradient(90deg, #4e54c8, #8f94fb); color:#fff; display:flex; justify-content:center; padding:12px 0; }
+body { margin:0; font-family: Arial,sans-serif; background:#f0f0f0; color:#333; }
+nav { background:#333; display:flex; justify-content:center; flex-wrap:wrap; padding:12px 0; }
 nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
-nav a:hover { color:#ffeb3b; }
-section { max-width:1200px; margin:40px auto; padding:20px; background:#ffffff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
-section h2 { color:#3a3d98; text-align:center; margin-bottom:15px; }
-.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; }
-.product { background:#f9f9f9; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+nav a:hover { color:#ffcc00; }
+section { max-width:1200px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
+section h2 { color:#333; text-align:center; margin-bottom:20px; }
+.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; padding:20px; }
+.product { background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
 .product:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
 .product img { width:100%; height:auto; border-radius:5px; }
-.price { color:#1abc9c; font-weight:bold; margin-top:5px; display:block; }
+.price { color:#007BFF; font-weight:bold; margin-top:5px; display:block; }
+.add-cart-btn { background:#007BFF; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
+.add-cart-btn:hover { background:#0056b3; }
 .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
-.modal-content { background:#ffffff; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
-.close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#3a3d98; cursor:pointer; }
-.add-cart-btn { background:#1abc9c; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
-.add-cart-btn:hover { background:#16a085; }
+.modal-content { background:#fff; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
+.close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#333; cursor:pointer; }
 .whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000; transition: transform 0.2s; }
 .whatsapp-btn:hover { transform:scale(1.1); }
-#miniCart { position:fixed; bottom:100px; right:20px; background:#1abc9c; color:white; padding:10px 15px; border-radius:8px; z-index:999; cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+#miniCart { position:fixed; bottom:100px; right:20px; background:#007BFF; color:white; padding:10px 15px; border-radius:8px; z-index:999; cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
 </style>
 </head>
 <body>
@@ -39,15 +38,57 @@ section h2 { color:#3a3d98; text-align:center; margin-bottom:15px; }
   <a href="contact.html">Contact</a>
 </nav>
 
+<!-- Everyday Laptops -->
 <section>
-<h2>Laptops</h2>
+<h2>Everyday Laptops</h2>
 <p style="text-align:center;">Click any laptop to view details or add to cart.</p>
+<div class="products-grid">
+  <div class="product" data-name="Lenovo ThinkPad Yoga Touch" data-price="R15,999" data-specs="Intel i7, 16GB RAM, 512GB SSD" data-image="https://images.lenovo.com/lenovo-yoga.jpg">
+    <img src="https://images.lenovo.com/lenovo-yoga.jpg" alt="Lenovo ThinkPad Yoga Touch">
+    <p><strong>Lenovo ThinkPad Yoga Touch</strong><br>R15,999</p>
+  </div>
+  <div class="product" data-name="ASUS Laptop Model" data-price="R11,999" data-specs="Intel i5, 8GB RAM, 256GB SSD" data-image="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg">
+    <img src="https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg" alt="ASUS Laptop">
+    <p><strong>ASUS Laptop</strong><br>R11,999</p>
+  </div>
+  <div class="product" data-name="HP Core i5" data-price="R9,999" data-specs="Intel i5, 8GB RAM, 256GB SSD" data-image="https://images.hp.com/hp-corei5.jpg">
+    <img src="https://images.hp.com/hp-corei5.jpg" alt="HP Core i5">
+    <p><strong>HP Core i5</strong><br>R9,999</p>
+  </div>
+</div>
 </section>
 
+<!-- Premium / MacBooks -->
+<section>
+<h2>Premium Laptops & MacBooks</h2>
 <div class="products-grid">
-  <!-- Your laptop products go here (unchanged) -->
+  <div class="product" data-name="MacOS Big Sur" data-price="R34,499" data-specs="Apple MacBook, MacOS Big Sur, 16GB RAM, 512GB SSD" data-image="https://images.apple.com/macbook-big-sur.jpg">
+    <img src="https://images.apple.com/macbook-big-sur.jpg" alt="MacOS Big Sur">
+    <p><strong>MacOS Big Sur</strong><br>R34,499</p>
+  </div>
 </div>
+</section>
 
+<!-- Gaming Laptops -->
+<section>
+<h2>Gaming Laptops</h2>
+<div class="products-grid">
+  <div class="product" data-name="Asus ROG Strix" data-price="R29,999" data-specs="Intel i7, RTX 3070, 16GB RAM, 1TB SSD" data-image="https://dlcdnimgs.asus.com/gaming-laptops-rog-strix.jpg">
+    <img src="https://dlcdnimgs.asus.com/gaming-laptops-rog-strix.jpg" alt="Asus ROG Strix">
+    <p><strong>Asus ROG Strix</strong><br>R29,999</p>
+  </div>
+  <div class="product" data-name="MSI Gaming Laptop" data-price="R27,499" data-specs="Intel i7, RTX 3060, 16GB RAM, 512GB SSD" data-image="https://www.msi.com/images/gaming-laptop.jpg">
+    <img src="https://www.msi.com/images/gaming-laptop.jpg" alt="MSI Gaming Laptop">
+    <p><strong>MSI Gaming Laptop</strong><br>R27,499</p>
+  </div>
+  <div class="product" data-name="Acer Predator" data-price="R32,499" data-specs="Intel i9, RTX 3080, 32GB RAM, 1TB SSD" data-image="https://www.acer.com/images/predator-gaming.jpg">
+    <img src="https://www.acer.com/images/predator-gaming.jpg" alt="Acer Predator">
+    <p><strong>Acer Predator</strong><br>R32,499</p>
+  </div>
+</div>
+</section>
+
+<!-- Modal -->
 <div class="modal" id="productModal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -64,9 +105,30 @@ section h2 { color:#3a3d98; text-align:center; margin-bottom:15px; }
 
 <script>
 let modal=document.getElementById("productModal"),modalImage=document.getElementById("modalImage"),modalName=document.getElementById("modalName"),modalSpecs=document.getElementById("modalSpecs"),modalPrice=document.getElementById("modalPrice"),closeModal=document.querySelector(".close"),addCartBtn=document.querySelector(".add-cart-btn"),cart=[];
-document.querySelectorAll(".product").forEach(p=>{p.addEventListener("click",()=>{modal.style.display="flex";modalImage.src=p.dataset.image;modalName.textContent=p.dataset.name;modalSpecs.textContent=p.dataset.specs;modalPrice.textContent=p.dataset.price;addCartBtn.onclick=()=>{cart.push({name:p.dataset.name,price:p.dataset.price});updateCart();modal.style.display="none"}})});
-closeModal.onclick=()=>{modal.style.display="none"};window.onclick=e=>{if(e.target==modal)modal.style.display="none"};
-function updateCart(){document.getElementById("miniCart").innerHTML=`Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;document.getElementById("sendCart").onclick=()=>{let msg="Hello Mr Dee, I would like to order the following:\n";cart.forEach((item,i)=>{msg+=`${i+1}x ${item.name} - ${item.price}\n`});let url="https://wa.me/27628952301?text="+encodeURIComponent(msg);window.open(url,"_blank")}};
+document.querySelectorAll(".product").forEach(p=>{
+  p.addEventListener("click",()=>{
+    modal.style.display="flex";
+    modalImage.src=p.dataset.image;
+    modalName.textContent=p.dataset.name;
+    modalSpecs.textContent=p.dataset.specs;
+    modalPrice.textContent=p.dataset.price;
+    addCartBtn.onclick=()=>{
+      cart.push({name:p.dataset.name,price:p.dataset.price});
+      updateCart();
+      modal.style.display="none";
+    }
+  });
+});
+closeModal.onclick=()=>{modal.style.display="none"};
+window.onclick=e=>{if(e.target==modal)modal.style.display="none"};
+function updateCart(){
+  document.getElementById("miniCart").innerHTML=`Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
+  document.getElementById("sendCart").onclick=()=>{
+    let msg="Hello Mr Dee, I would like to order the following:\n";
+    cart.forEach((item,i)=>{msg+=`${i+1}x ${item.name} - ${item.price}\n`;});
+    window.open("https://wa.me/27628952301?text="+encodeURIComponent(msg),"_blank");
+  }
+}
 </script>
 
 </body>
