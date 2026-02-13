@@ -187,6 +187,47 @@ section {
   cursor: pointer;
   font-weight: bold;
 }
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+/* Hero Banner */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero-btn:hover {
+  background: #333;
+}
 
 /* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
