@@ -82,6 +82,30 @@ const products = [
     price: "R12,499",
     image: "images/hp.jpg"
   }
+const products = [
+
+  // JEANS
+  { name:"Diesel Jeans", price:"R1,899", image:"images/diesel.jpg", category:"jeans" },
+  { name:"G-Star Raw Jeans", price:"R1,799", image:"images/gstar.jpg", category:"jeans" },
+  { name:"Replay Jeans", price:"R1,699", image:"images/replay.jpg", category:"jeans" },
+  { name:"Raw Denim Jeans", price:"R1,499", image:"images/raw.jpg", category:"jeans" },
+  { name:"Ducati Jeans", price:"R1,599", image:"images/ducati.jpg", category:"jeans" },
+
+  // SHOES
+  { name:"Nike Air Max", price:"R2,499", image:"images/nike.jpg", category:"shoes" },
+  { name:"Adidas Ultraboost", price:"R2,299", image:"images/adidas.jpg", category:"shoes" },
+  { name:"Puma RS-X", price:"R1,999", image:"images/puma.jpg", category:"shoes" },
+  { name:"Timberland Boots", price:"R2,800", image:"images/timberland.jpg", category:"shoes" },
+
+  // PHONES
+  { name:"iPhone 13", price:"R12,999", image:"images/iphone13.jpg", category:"phones" },
+  { name:"iPhone 14", price:"R15,999", image:"images/iphone14.jpg", category:"phones" },
+  { name:"iPhone 15", price:"R19,999", image:"images/iphone15.jpg", category:"phones" },
+
+  // LAPTOPS
+  { name:"Lenovo ThinkPad", price:"R14,999", image:"images/lenovo.jpg", category:"laptops" },
+  { name:"HP ProBook", price:"R12,499", image:"images/hp.jpg", category:"laptops" }
+
 ];
 
 const container = document.getElementById("all-products");
