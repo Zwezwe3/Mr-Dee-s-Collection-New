@@ -3,180 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Dee's Collection - iPhones</title>
-
-<style>
-body { margin:0; font-family: Arial,sans-serif; background:#f0f0f0; color:#333; }
-nav { background:#333; display:flex; justify-content:center; flex-wrap:wrap; padding:12px 0; }
-nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
-nav a:hover { color:#4CAF50; }
-
-section {
-  max-width:1200px;
-  margin:40px auto;
-  padding:20px;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 3px 10px rgba(0,0,0,0.05);
-}
-
-section h2 { text-align:center; margin-bottom:20px; }
-
-.products-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  padding:20px;
-}
-
-.product {
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  text-align:center;
-  padding:10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor:pointer;
-}
-
-.product:hover {
-  transform:scale(1.05);
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
-}
-
-.product img {
-  width:100%;
-  height:auto;
-  border-radius:5px;
-}
-
-.price {
-  color:#007BFF;
-  font-weight:bold;
-  margin-top:5px;
-}
-
-.add-cart-btn {
-  background:#007BFF;
-  color:white;
-  padding:10px 15px;
-  border:none;
-  border-radius:5px;
-  margin-top:10px;
-  cursor:pointer;
-}
-
-.modal {
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-}
-
-.modal-content {
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  max-width:500px;
-  width:90%;
-  position:relative;
-  text-align:center;
-}
-
-.close {
-  position:absolute;
-  top:10px;
-  right:15px;
-  font-size:24px;
-  cursor:pointer;
-}
-
-.whatsapp-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  border-radius:50%;
-  width:60px;
-  height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:30px;
-}
-
-#miniCart {
-  position:fixed;
-  bottom:100px;
-  right:20px;
-  background:#007BFF;
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
-}
-</style>
+<title>Phones – Mr Dee's Collection</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<header>
+  <h1>Mr Dee's Collection</h1>
+  <p>Quality Tech and Footwear</p>
+</header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Sports Shoes</a>
+  <a href="products.html">Products</a>
   <a href="jeans.html">Jeans</a>
-  <a href="about.html">About</a>
+  <a href="shoes.html">Shoes</a>
+  <a href="phones.html">Phones</a>
+  <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
-  <a href="checkout.html" class="cart-link">
-  🛒 Cart (<span id="cart-count">0</span>)
-</a>
 </nav>
 
-<section>
-<h2>All iPhones</h2>
-<div class="products-grid">
-
-<div class="product" data-name="iPhone 14" data-price="R18,499" data-specs="128GB" data-image="https://fones.co.za/wp-content/uploads/2025/03/iphone-14.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone-14.jpg">
-  <p><strong>iPhone 14</strong><br>R18,499</p>
-</div>
-
-<div class="product" data-name="iPhone 14 Pro" data-price="R21,999" data-specs="256GB" data-image="https://fones.co.za/wp-content/uploads/2025/03/iphone-14-pro.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/03/iphone-14-pro.jpg">
-  <p><strong>iPhone 14 Pro</strong><br>R21,999</p>
-</div>
-
-<div class="product" data-name="iPhone 15" data-price="R23,499" data-specs="128GB" data-image="https://fones.co.za/wp-content/uploads/2025/09/iphone-15.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/09/iphone-15.jpg">
-  <p><strong>iPhone 15</strong><br>R23,499</p>
-</div>
-
-<div class="product" data-name="iPhone 15 Pro Max" data-price="R34,499" data-specs="512GB" data-image="https://fones.co.za/wp-content/uploads/2025/09/iphone-15-pro-max.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/09/iphone-15-pro-max.jpg">
-  <p><strong>iPhone 15 Pro Max</strong><br>R34,499</p>
-</div>
-
-<div class="product" data-name="iPhone 16" data-price="R35,999" data-specs="128GB" data-image="https://fones.co.za/wp-content/uploads/2025/11/iphone-16.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/11/iphone-16.jpg">
-  <p><strong>iPhone 16</strong><br>R35,999</p>
-</div>
-
-<div class="product" data-name="iPhone 16 Pro Max" data-price="R39,999" data-specs="512GB" data-image="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Max.jpg">
-  <img src="https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Max.jpg">
-  <p><strong>iPhone 16 Pro Max</strong><br>R39,999</p>
-</div>
-
-</div>
-</section>
+<main>
+  <h2 style="text-align:center;">Phones Collection</h2>
+  <div class="products-grid" id="category-products"></div>
+</main>
 
 <!-- Modal -->
 <div class="modal" id="productModal">
@@ -193,48 +43,59 @@ section h2 { text-align:center; margin-bottom:20px; }
 <div id="miniCart">Cart: 0 items</div>
 <a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#9993;</a>
 
+<script src="products.js"></script>
 <script>
-let modal=document.getElementById("productModal");
-let modalImage=document.getElementById("modalImage");
-let modalName=document.getElementById("modalName");
-let modalSpecs=document.getElementById("modalSpecs");
-let modalPrice=document.getElementById("modalPrice");
-let closeModal=document.querySelector(".close");
-let addCartBtn=document.querySelector(".add-cart-btn");
-let miniCart=document.getElementById("miniCart");
+const CATEGORY = "phones";
+const container = document.getElementById("category-products");
+let cart = [];
 
-let cart=[];
-
-document.querySelectorAll(".product").forEach(p=>{
-  p.addEventListener("click",()=>{
-    modal.style.display="flex";
-    modalImage.src=p.dataset.image;
-    modalName.textContent=p.dataset.name;
-    modalSpecs.textContent=p.dataset.specs;
-    modalPrice.textContent=p.dataset.price;
-
-    addCartBtn.onclick=()=>{
-      cart.push({name:p.dataset.name,price:p.dataset.price});
-      updateCart();
-      modal.style.display="none";
-    }
+function renderCategory() {
+  container.innerHTML = "";
+  products.filter(p => p.category === CATEGORY).forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product";
+    card.innerHTML = `<img src="${product.image}" alt="${product.name}">
+                      <p><strong>${product.name}</strong><br>R${product.price}</p>`;
+    card.addEventListener("click", () => openModal(product));
+    container.appendChild(card);
   });
-});
-
-closeModal.onclick=()=>modal.style.display="none";
-window.onclick=e=>{ if(e.target==modal) modal.style.display="none"; };
-
-function updateCart(){
-  miniCart.textContent="Cart: "+cart.length+" item(s)";
-  miniCart.onclick=()=>{
-    let msg="Hello Mr Dee, I would like to order:\n";
-    cart.forEach((item,i)=>{
-      msg+=(i+1)+"x "+item.name+" - "+item.price+"\n";
-    });
-    window.open("https://wa.me/27628952301?text="+encodeURIComponent(msg));
-  };
 }
-  <script src="cart.js"></script>
+
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalSpecs = document.getElementById("modalSpecs");
+const modalPrice = document.getElementById("modalPrice");
+const closeModal = document.querySelector(".close");
+const addCartBtn = document.querySelector(".add-cart-btn");
+const miniCart = document.getElementById("miniCart");
+
+function openModal(product) {
+  modal.style.display = "flex";
+  modalImage.src = product.image;
+  modalName.textContent = product.name;
+  modalSpecs.textContent = product.specs;
+  modalPrice.textContent = "R" + product.price;
+  addCartBtn.onclick = () => {
+    cart.push(product);
+    updateCart();
+    modal.style.display = "none";
+  }
+}
+
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
+
+function updateCart() {
+  miniCart.textContent = "Cart: " + cart.length + " item(s)";
+  miniCart.onclick = () => {
+    let msg = "Hello Mr Dee, I would like to order:\n";
+    cart.forEach((item,i) => msg += `${i+1}x ${item.name} - R${item.price}\n`);
+    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
+  }
+}
+
+renderCategory();
 </script>
 
 </body>
