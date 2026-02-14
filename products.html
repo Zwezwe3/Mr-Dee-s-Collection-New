@@ -1,52 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>All Products - Mr Dee's Collection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+// Master product list
+const products = [
+  // Laptops
+  {name: "Lenovo ThinkPad Yoga", price: 15999, category: "laptops", image:"https://www.lenovo.com/medias/lenovo-laptop.jpg", specs:"Intel i7, 16GB RAM, 512GB SSD"},
+  {name: "HP Spectre x360", price: 18999, category: "laptops", image:"https://example.com/hp-spectre.jpg", specs:"Intel i7, 16GB RAM, 1TB SSD"},
 
-<body>
+  // Phones
+  {name: "iPhone 16 Pro Max", price: 39999, category: "phones", image:"https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Max.jpg", specs:"512GB, Silver"},
+  {name: "Samsung Galaxy Z Fold5", price: 35999, category: "phones", image:"https://example.com/galaxy-fold5.jpg", specs:"512GB, Phantom Black"},
 
-<header>
-  <h1>Mr Dee's Collection</h1>
-  <p>Quality Tech and Footwear</p>
-</header>
+  // Jeans
+  {name: "Diesel Jeans", price: 1999, category: "jeans", image:"images/jeans-diesel.jpg", specs:"Men's Sizes 30-38"},
+  {name: "Raw Jeans", price: 1499, category: "jeans", image:"images/jeans-raw.jpg", specs:"Men's Sizes 28-36"},
+  {name: "Replay Jeans", price: 1799, category: "jeans", image:"images/jeans-replay.jpg", specs:"Men's Sizes 30-38"},
+  {name: "G-Star Jeans", price: 1899, category: "jeans", image:"images/jeans-gstar.jpg", specs:"Men's Sizes 30-38"},
+  {name: "Ducati Jeans", price: 2199, category: "jeans", image:"images/jeans-ducati.jpg", specs:"Men's Sizes 30-38"},
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="jeans.html">Jeans</a>
-  <a href="shoes.html">Shoes</a>
-  <a href="phones.html">Phones</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<main class="container">
-  <h2>All Products</h2>
-  <div id="all-products" class="products"></div>
-  <div id="all-products" class="products-grid"></div>
-</main>
-
-<script src="products.js"></script>
- <script src="products.js"></script>
-<script src="cart.js"></script>
-<script>
-const container = document.getElementById("all-products");
-
-products.forEach(p => {
-  const box = document.createElement("div");
-  box.className = "product";
-  box.innerHTML = `
-    <img src="${p.image}" alt="${p.name}">
-    <p><strong>${p.name}</strong><br>R${p.price}</p>
-    <button onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
-  `;
-  container.appendChild(box);
-});
-</script> 
-
-</body>
-</html>
+  // Shoes
+  {name: "Nike Air Max 270", price: 2499, category: "shoes", image:"https://images.nike.com/is/image/DotCom/CW7306_101_A_PREM?align=0,1", specs:"Men's Sizes 6-12"},
+  {name: "Nike Revolution 6", price: 1799, category: "shoes", image:"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/317d23dc-1ed0-4049-b3e3-2cf40b5fc2e0/revolution-6-running-shoe.png", specs:"Men's Sizes 6-12"},
+  {name: "Adidas Ultraboost 22", price: 3199, category: "shoes", image:"images/sports-shoe-ultraboost22.jpg", specs:"Men's Sizes 6-12"},
+  {name: "Adidas NMD_R1", price: 2799, category: "shoes", image:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bd
