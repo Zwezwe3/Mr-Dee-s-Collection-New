@@ -26,6 +26,16 @@
 
 <section>
 <h2>All Products</h2>
+
+<!-- Category Tabs -->
+<div class="tabs">
+  <button class="tab-btn active" data-category="all">All</button>
+  <button class="tab-btn" data-category="laptop">Laptops</button>
+  <button class="tab-btn" data-category="phone">iPhones</button>
+  <button class="tab-btn" data-category="shoe">Sports Shoes</button>
+  <button class="tab-btn" data-category="jeans">Jeans</button>
+</div>
+
 <div class="products-grid" id="productsGrid"></div>
 </section>
 
@@ -45,5 +55,80 @@
 <a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#9993;</a>
 
 <script src="products.js"></script>
+<script>
+const productsGrid = document.getElementById("productsGrid");
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalSpecs = document.getElementById("modalSpecs");
+const modalPrice = document.getElementById("modalPrice");
+const closeModal = document.querySelector(".close");
+const addCartBtn = document.querySelector(".add-cart-btn");
+const miniCart = document.getElementById("miniCart");
+
+let cart = [];
+let currentCategory = "all";
+
+// Populate products
+function showProducts(category){
+  productsGrid.innerHTML = "";
+  products.forEach(p=>{
+    if(category === "all" || p.category === category){
+      const div = document.createElement("div");
+      div.className = "product";
+      div.dataset.name = p.name;
+      div.dataset.price = p.price;
+      div.dataset.specs = p.specs;
+      div.dataset.image = p.image;
+
+      div.innerHTML = `
+        <img src="${p.image}" alt="${p.name}">
+        <p><strong>${p.name}</strong><br>${p.price}</p>
+      `;
+      productsGrid.appendChild(div);
+
+      div.addEventListener("click", ()=>{
+        modal.style.display = "flex";
+        modalImage.src = p.image;
+        modalName.textContent = p.name;
+        modalSpecs.textContent = p.specs;
+        modalPrice.textContent = p.price;
+
+        addCartBtn.onclick = ()=>{
+          cart.push({name:p.name, price:p.price});
+          updateCart();
+          modal.style.display="none";
+        };
+      });
+    }
+  });
+}
+
+// Tabs
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelector(".tab-btn.active").classList.remove("active");
+    btn.classList.add("active");
+    currentCategory = btn.dataset.category;
+    showProducts(currentCategory);
+  });
+});
+
+// Modal & cart
+closeModal.onclick = ()=> modal.style.display="none";
+window.onclick = e=>{ if(e.target==modal) modal.style.display="none"; };
+
+function updateCart(){
+  miniCart.innerHTML = `Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
+  document.getElementById("sendCart").onclick = ()=>{
+    let msg = "Hello Mr Dee, I would like to order:\n";
+    cart.forEach((item,i)=> msg+=`${i+1}x ${item.name} - ${item.price}\n`);
+    window.open("https://wa.me/27628952301?text="+encodeURIComponent(msg), "_blank");
+  };
+}
+
+// Initial load
+showProducts(currentCategory);
+</script>
 </body>
 </html>
