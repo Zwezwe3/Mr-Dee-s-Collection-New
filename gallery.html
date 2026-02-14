@@ -3,93 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Dee's Collection - Gallery</title>
+<title>Gallery - Mr Dee's Collection</title>
 
 <style>
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(120deg,#f6f8ff,#eef9f3);
-  color:#333;
+  background: #f6f6f6;
 }
 
-/* Navigation */
+/* NAV */
 nav {
-  background:#222;
-  color:#fff;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  padding:12px 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
 }
 nav a {
-  color:#fff;
-  text-decoration:none;
-  margin:0 15px;
-  font-weight:bold;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 nav a:hover {
-  color:#4CAF50;
+  color: #4CAF50;
 }
 
-/* Section */
-section {
-  max-width:1200px;
-  margin:40px auto;
-  padding:20px;
-  background:#ffffff;
-  border-radius:10px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
-section h2 {
-  text-align:center;
-  margin-bottom:10px;
+/* TITLE */
+h1 {
+  text-align: center;
+  margin: 30px 0;
 }
 
-/* Gallery grid */
-.gallery-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin-top:20px;
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.gallery-grid img {
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:10px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor:pointer;
-}
-
-.gallery-grid img:hover {
-  transform:scale(1.05);
-  box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Floating WhatsApp button */
-.whatsapp-btn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  border-radius:50%;
-  width:60px;
-  height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:30px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.2);
-  z-index:1000;
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
   transition: transform 0.2s;
 }
-.whatsapp-btn:hover {
-  transform:scale(1.1);
+.gallery img:hover {
+  transform: scale(1.03);
 }
 </style>
 </head>
@@ -99,32 +62,21 @@ section h2 {
 <nav>
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Sports Shoes</a>
   <a href="jeans.html">Jeans</a>
+  <a href="phones.html">Phones</a>
+  <a href="shoes.html">Shoes</a>
   <a href="gallery.html">Gallery</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>Gallery</h2>
-  <p style="text-align:center;">
-    A glimpse of our products and packages ready for delivery.
-  </p>
+<h1>Delivery & Packaging Gallery</h1>
 
-  <div class="gallery-grid">
-    <img src="images/469397955_555769773945031_5435838952461765627_n.jpg" alt="Gallery item">
-    <img src="images/481970325_611442891702853_2021659528489668591_n.jpg" alt="HP laptop package">
-    <img src="images/471474623_567219082800100_8411453691755803827_n.jpg" alt="Gallery item">
-    <img src="images/471327887_567219086133433_5377521008140909153_n.jpg" alt="Gallery item">
-    <img src="images/490813930_1850754289078059_4878162692189863775_n.jpg" alt="Gallery item">
-    <img src="images/491210622_1850754472411374_7778383605876351303_n.jpg" alt="Gallery item">
-  </div>
-</section>
-
-<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+<div class="gallery">
+  <!-- Replace these with your real courier images -->
+  <img src="images/courier1.jpg" alt="Courier package">
+  <img src="images/courier2.jpg" alt="Packaged order">
+  <img src="images/courier3.jpg" alt="Ready for delivery">
+  <img src="images/courier4.jpg" alt="Delivery process">
+</div>
 
 </body>
 </html>
