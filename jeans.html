@@ -3,77 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Dee's Collection - Jeans</title>
-<style>
-body { margin:0; font-family: Arial,sans-serif; background:#f6f6f6; color:#333; }
-nav { background:#333; color:#fff; display:flex; justify-content:center; padding:12px 0; }
-nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold; }
-nav a:hover { color:#ffeb3b; }
-section { max-width:1200px; margin:40px auto; padding:20px; background:#f5f5f5; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); }
-section h2 { color:#333; text-align:center; }
-.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; padding:20px; }
-.product { background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center; padding:10px; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
-.product:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
-.product img { width:100%; height:auto; border-radius:5px; }
-.price { color:#333; font-weight:bold; margin-top:5px; display:block; }
-.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
-.modal-content { background:#f5f5f5; padding:20px; border-radius:10px; max-width:500px; width:90%; position:relative; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.2); }
-.close { position:absolute; top:10px; right:15px; font-size:24px; font-weight:bold; color:#333; cursor:pointer; }
-.add-cart-btn { background:#333; color:white; padding:10px 15px; border:none; border-radius:5px; margin-top:10px; cursor:pointer; }
-.add-cart-btn:hover { background:#555; }
-.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:30px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000; transition: transform 0.2s; }
-.whatsapp-btn:hover { transform:scale(1.1); }
-#miniCart { position:fixed; bottom:100px; right:20px; background:#333; color:white; padding:10px 15px; border-radius:8px; z-index:999; cursor:pointer; font-weight:bold; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
-</style>
+<title>Jeans – Mr Dee's Collection</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+  <h1>Mr Dee's Collection</h1>
+  <p>Quality Tech and Footwear</p>
+</header>
+
 <nav>
   <a href="index.html">Home</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="iphones.html">iPhones</a>
-  <a href="shoes.html">Sports Shoes</a>
+  <a href="products.html">Products</a>
   <a href="jeans.html">Jeans</a>
-  <a href="about.html">About</a>
+  <a href="shoes.html">Shoes</a>
+  <a href="phones.html">Phones</a>
+  <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
-  <a href="checkout.html" class="cart-link">
-  🛒 Cart (<span id="cart-count">0</span>)
-</a>
 </nav>
 
-<section>
-<h2>Jeans Collection</h2>
-<p style="text-align:center;">Click any jeans to view details or add to cart.</p>
-</section>
-
-<div class="products-grid">
-  <div class="product" data-name="Ducati Jeans" data-price="R1,400" data-specs="Men's Denim Jeans" data-image="images/491406850_1852484725571682_588279870187893033_n.jpg">
-    <img src="images/491406850_1852484725571682_588279870187893033_n.jpg" alt="Ducati Jeans">
-    <p><strong>Ducati Jeans</strong><br>Men's Denim<br><span class="price">R1,400</span></p>
-  </div>
-  <div class="product" data-name="Replay Jeans" data-price="R1,400" data-specs="Men's Denim Jeans" data-image="images/491950339_1852484628905025_1160845635907717103_n.jpg">
-    <img src="images/491950339_1852484628905025_1160845635907717103_n.jpg" alt="Replay Jeans">
-    <p><strong>Replay Jeans</strong><br>Men's Denim<br><span class="price">R1,400</span></p>
-  </div>
-  <div class="product" data-name="Diesel Jeans" data-price="R1,400" data-specs="Men's Denim Jeans" data-image="images/491736509_1852484418905046_8802287681723526745_n.jpg">
-    <img src="images/491736509_1852484418905046_8802287681723526745_n.jpg" alt="Diesel Jeans">
-    <p><strong>Diesel Jeans</strong><br>Men's Denim<br><span class="price">R1,400</span></p>
-  </div>
-  <div class="product" data-name="Gstar Jeans" data-price="R1,400" data-specs="Men's Denim Jeans" data-image="images/490731517_1852484292238392_3112171941870493245_n.jpg">
-    <img src="images/490731517_1852484292238392_3112171941870493245_n.jpg" alt="Gstar Jeans">
-    <p><strong>Gstar Jeans</strong><br>Men's Denim<br><span class="price">R1,400</span></p>
-  </div>
-  <div class="product" data-name="Raw Jeans" data-price="R1,400" data-specs="Men's Denim Jeans" data-image="images/490937915_1852484852238336_275008351211149739_n.jpg">
-    <img src="images/490937915_1852484852238336_275008351211149739_n.jpg" alt="Raw Jeans">
-    <p><strong>Raw Jeans</strong><br>Men's Denim<br><span class="price">R1,400</span></p>
-  </div>
-</div>
+<main>
+  <h2 style="text-align:center;">Jeans Collection</h2>
+  <div class="products-grid" id="category-products"></div>
+</main>
 
 <!-- Modal -->
 <div class="modal" id="productModal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <img id="modalImage" src="" alt="" style="width:100%; border-radius:8px;">
+    <img id="modalImage" style="width:100%; border-radius:8px;">
     <h3 id="modalName"></h3>
     <p id="modalSpecs"></p>
     <p id="modalPrice" class="price"></p>
@@ -81,47 +40,62 @@ section h2 { color:#333; text-align:center; }
   </div>
 </div>
 
-<div id="miniCart">Cart: 0 items | <span id="sendCart">Send WhatsApp Order</span></div>
-<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#x2709;</a>
+<div id="miniCart">Cart: 0 items</div>
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#9993;</a>
 
+<script src="products.js"></script>
 <script>
-let modal = document.getElementById("productModal"),
-    modalImage = document.getElementById("modalImage"),
-    modalName = document.getElementById("modalName"),
-    modalSpecs = document.getElementById("modalSpecs"),
-    modalPrice = document.getElementById("modalPrice"),
-    closeModal = document.querySelector(".close"),
-    addCartBtn = document.querySelector(".add-cart-btn"),
-    cart = [];
+const CATEGORY = "jeans";
+const container = document.getElementById("category-products");
+let cart = [];
 
-document.querySelectorAll(".product").forEach(p => {
-  p.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImage.src = p.dataset.image;
-    modalName.textContent = p.dataset.name;
-    modalSpecs.textContent = p.dataset.specs;
-    modalPrice.textContent = p.dataset.price;
-    addCartBtn.onclick = () => {
-      cart.push({name: p.dataset.name, price: p.dataset.price});
-      updateCart();
-      modal.style.display = "none";
-    };
+function renderCategory() {
+  container.innerHTML = "";
+  products.filter(p => p.category === CATEGORY).forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product";
+    card.innerHTML = `<img src="${product.image}" alt="${product.name}">
+                      <p><strong>${product.name}</strong><br>R${product.price}</p>`;
+    card.addEventListener("click", () => openModal(product));
+    container.appendChild(card);
   });
-});
-
-closeModal.onclick = () => { modal.style.display = "none"; };
-window.onclick = e => { if(e.target == modal) modal.style.display = "none"; };
-
-function updateCart(){
-  document.getElementById("miniCart").innerHTML = `Cart: ${cart.length} item(s) | <span id="sendCart">Send WhatsApp Order</span>`;
-  document.getElementById("sendCart").onclick = () => {
-    let msg = "Hello Mr Dee, I would like to order the following:\n";
-    cart.forEach((item,i) => { msg += `${i+1}x ${item.name} - ${item.price}\n`; });
-    let url = "https://wa.me/27628952301?text=" + encodeURIComponent(msg);
-    window.open(url, "_blank");
-  };
 }
-  <script src="cart.js"></script>
+
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalSpecs = document.getElementById("modalSpecs");
+const modalPrice = document.getElementById("modalPrice");
+const closeModal = document.querySelector(".close");
+const addCartBtn = document.querySelector(".add-cart-btn");
+const miniCart = document.getElementById("miniCart");
+
+function openModal(product) {
+  modal.style.display = "flex";
+  modalImage.src = product.image;
+  modalName.textContent = product.name;
+  modalSpecs.textContent = product.specs;
+  modalPrice.textContent = "R" + product.price;
+  addCartBtn.onclick = () => {
+    cart.push(product);
+    updateCart();
+    modal.style.display = "none";
+  }
+}
+
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
+
+function updateCart() {
+  miniCart.textContent = "Cart: " + cart.length + " item(s)";
+  miniCart.onclick = () => {
+    let msg = "Hello Mr Dee, I would like to order:\n";
+    cart.forEach((item,i) => msg += `${i+1}x ${item.name} - R${item.price}\n`);
+    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
+  }
+}
+
+renderCategory();
 </script>
 
 </body>
