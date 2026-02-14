@@ -31,6 +31,22 @@
 </main>
 
 <script src="products.js"></script>
+ <script src="products.js"></script>
+<script src="cart.js"></script>
+<script>
+const container = document.getElementById("all-products");
+
+products.forEach(p => {
+  const box = document.createElement("div");
+  box.className = "product";
+  box.innerHTML = `
+    <img src="${p.image}" alt="${p.name}">
+    <p><strong>${p.name}</strong><br>R${p.price}</p>
+    <button onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
+  `;
+  container.appendChild(box);
+});
+</script> 
 
 </body>
 </html>
