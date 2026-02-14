@@ -33,6 +33,9 @@ if (container) {
       <div class="product">
         <img src="${product.image}" alt="${product.name}">
         <p><strong>${product.name}</strong><br>${product.price}</p>
+<button onclick="addToCart('Nike Air Max 270', 2499)">
+  Add to Cart
+</button>
       </div>
     `;
   });
