@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shoes - Mr Dee's Collection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoes – Mr Dee's Collection</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -22,68 +21,82 @@
   <a href="phones.html">Phones</a>
   <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
-  <a href="checkout.html" class="cart-link">
-  🛒 Cart (<span id="cart-count">0</span>)
-</a>
 </nav>
 
-<main class="container">
-  <h2>Sport Shoes & Boots</h2>
-
-  <div class="products">
-
-    <!-- Nike Air Max -->
-    <div class="product"
-         data-name="Nike Air Max"
-         data-price="R2,499"
-         data-specs="Nike Air Max, Sizes 6–12"
-         data-image="images/nike.jpg">
-      <img src="images/nike.jpg" alt="Nike Air Max">
-      <p><strong>Nike Air Max</strong><br>R2,499</p>
-    </div>
-
-    <!-- Adidas Ultraboost -->
-    <div class="product"
-         data-name="Adidas Ultraboost"
-         data-price="R2,299"
-         data-specs="Adidas Ultraboost, Sizes 6–12"
-         data-image="images/adidas.jpg">
-      <img src="images/adidas.jpg" alt="Adidas Ultraboost">
-      <p><strong>Adidas Ultraboost</strong><br>R2,299</p>
-    </div>
-
-    <!-- Puma RS-X -->
-    <div class="product"
-         data-name="Puma RS-X"
-         data-price="R1,999"
-         data-specs="Puma RS-X, Sizes 6–12"
-         data-image="images/puma.jpg">
-      <img src="images/puma.jpg" alt="Puma RS-X">
-      <p><strong>Puma RS-X</strong><br>R1,999</p>
-    </div>
-
-    <!-- Timberland Boots -->
-    <div class="product"
-         data-name="Timberland 6 Inch Boots"
-         data-price="R2,800"
-         data-specs="Timberland 6 Inch Premium Waterproof Boots"
-         data-image="images/timberland.jpg">
-      <img src="images/timberland.jpg" alt="Timberland Boots">
-      <p><strong>Timberland Boots</strong><br>R2,800</p>
-    </div>
-
-    <!-- Caterpillar Boots -->
-    <div class="product"
-         data-name="Caterpillar Boots"
-         data-price="R2,600"
-         data-specs="Caterpillar Leather Work Boots"
-         data-image="images/caterpillar.jpg">
-      <img src="images/caterpillar.jpg" alt="Caterpillar Boots">
-      <p><strong>Caterpillar Boots</strong><br>R2,600</p>
-    </div>
-
-  </div>
+<main>
+  <h2 style="text-align:center;">Sports Shoes & Boots</h2>
+  <div class="products-grid" id="category-products"></div>
 </main>
+
+<!-- Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" style="width:100%; border-radius:8px;">
+    <h3 id="modalName"></h3>
+    <p id="modalSpecs"></p>
+    <p id="modalPrice" class="price"></p>
+    <button class="add-cart-btn">Add to Cart</button>
+  </div>
+</div>
+
+<div id="miniCart">Cart: 0 items</div>
+<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#9993;</a>
+
+<script src="products.js"></script>
+<script>
+const CATEGORY = "shoes";
+const container = document.getElementById("category-products");
+let cart = [];
+
+function renderCategory() {
+  container.innerHTML = "";
+  products.filter(p => p.category === CATEGORY).forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product";
+    card.innerHTML = `<img src="${product.image}" alt="${product.name}">
+                      <p><strong>${product.name}</strong><br>R${product.price}</p>`;
+    card.addEventListener("click", () => openModal(product));
+    container.appendChild(card);
+  });
+}
+
+const modal = document.getElementById("productModal");
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalSpecs = document.getElementById("modalSpecs");
+const modalPrice = document.getElementById("modalPrice");
+const closeModal = document.querySelector(".close");
+const addCartBtn = document.querySelector(".add-cart-btn");
+const miniCart = document.getElementById("miniCart");
+
+function openModal(product) {
+  modal.style.display = "flex";
+  modalImage.src = product.image;
+  modalName.textContent = product.name;
+  modalSpecs.textContent = product.specs;
+  modalPrice.textContent = "R" + product.price;
+  addCartBtn.onclick = () => {
+    cart.push(product);
+    updateCart();
+    modal.style.display = "none";
+  }
+}
+
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
+
+function updateCart() {
+  miniCart.textContent = "Cart: " + cart.length + " item(s)";
+  miniCart.onclick = () => {
+    let msg = "Hello Mr Dee, I would like to order:\n";
+    cart.forEach((item,i) => msg += `${i+1}x ${item.name} - R${item.price}\n`);
+    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
+  }
+}
+
+renderCategory();
+</script>
 
 </body>
 </html>
