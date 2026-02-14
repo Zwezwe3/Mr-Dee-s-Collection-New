@@ -1,42 +1,26 @@
-
+// All products in one place
 const products = [
+  // Laptops
+  {name: "Lenovo ThinkPad Yoga", price: 15999, category: "laptops", image:"https://www.lenovo.com/medias/lenovo-laptop.jpg", specs:"Intel i7, 16GB RAM, 512GB SSD"},
+  {name: "HP Spectre x360", price: 18999, category: "laptops", image:"https://example.com/hp-spectre.jpg", specs:"Intel i7, 16GB RAM, 1TB SSD"},
 
-  // JEANS
-  { name:"Diesel Jeans", price:"R1,899", image:"images/diesel.jpg", category:"jeans" },
-  { name:"G-Star Raw Jeans", price:"R1,799", image:"images/gstar.jpg", category:"jeans" },
-  { name:"Replay Jeans", price:"R1,699", image:"images/replay.jpg", category:"jeans" },
-  { name:"Raw Denim Jeans", price:"R1,499", image:"images/raw.jpg", category:"jeans" },
-  { name:"Ducati Jeans", price:"R1,599", image:"images/ducati.jpg", category:"jeans" },
+  // Phones
+  {name: "iPhone 16 Pro Max", price: 39999, category: "phones", image:"https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Max.jpg", specs:"512GB, Silver"},
+  {name: "Samsung Galaxy Z Fold5", price: 35999, category: "phones", image:"https://example.com/galaxy-fold5.jpg", specs:"512GB, Phantom Black"},
 
-  // SHOES
-  { name:"Nike Air Max", price:"R2,499", image:"images/nike.jpg", category:"shoes" },
-  { name:"Adidas Ultraboost", price:"R2,299", image:"images/adidas.jpg", category:"shoes" },
-  { name:"Puma RS-X", price:"R1,999", image:"images/puma.jpg", category:"shoes" },
-  { name:"Timberland Boots", price:"R2,800", image:"images/timberland.jpg", category:"shoes" },
+  // Jeans
+  {name: "Diesel Jeans", price: 1999, category: "jeans", image:"images/jeans-diesel.jpg", specs:"Men's Sizes 30-38"},
+  {name: "Raw Jeans", price: 1499, category: "jeans", image:"images/jeans-raw.jpg", specs:"Men's Sizes 28-36"},
+  {name: "Replay Jeans", price: 1799, category: "jeans", image:"images/jeans-replay.jpg", specs:"Men's Sizes 30-38"},
+  {name: "Gstar Jeans", price: 1699, category: "jeans", image:"images/jeans-gstar.jpg", specs:"Men's Sizes 30-38"},
+  {name: "Ducati Jeans", price: 1899, category: "jeans", image:"images/jeans-ducati.jpg", specs:"Men's Sizes 30-38"},
 
-  // PHONES
-  { name:"iPhone 13", price:"R12,999", image:"images/iphone13.jpg", category:"phones" },
-  { name:"iPhone 14", price:"R15,999", image:"images/iphone14.jpg", category:"phones" },
-  { name:"iPhone 15", price:"R19,999", image:"images/iphone15.jpg", category:"phones" },
-
-  // LAPTOPS
-  { name:"Lenovo ThinkPad", price:"R14,999", image:"images/lenovo.jpg", category:"laptops" },
-  { name:"HP ProBook", price:"R12,499", image:"images/hp.jpg", category:"laptops" }
-
+  // Shoes
+  {name: "Nike Air Max 270", price: 2499, category: "shoes", image:"https://images.nike.com/is/image/DotCom/CW7306_101_A_PREM?align=0,1", specs:"Men's Sizes 6-12"},
+  {name: "Nike Revolution 6", price: 1799, category: "shoes", image:"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/317d23dc-1ed0-4049-b3e3-2cf40b5fc2e0/revolution-6-running-shoe.png", specs:"Men's Sizes 6-12"},
+  {name: "Adidas Ultraboost 22", price: 3199, category: "shoes", image:"images/sports shoe (7).jpg", specs:"Men's Sizes 6-12"},
+  {name: "Adidas NMD_R1", price: 2799, category: "shoes", image:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bd17f60b9f834d80b8faac7901536e3a_9366/NMD_R1_Shoes_White_GX0405_01_standard.jpg", specs:"Men's Sizes 6-12"},
+  {name: "Puma RS-X³", price: 1899, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/383200/01/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
+  {name: "Puma Future Rider", price: 1699, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/380869/02/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
+  {name: "Timberland 6 Inch Boots", price: 2999, category: "shoes", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", specs:"Waterproof Boots"}
 ];
-
-const container = document.getElementById("all-products");
-
-if (container) {
-  products.forEach(product => {
-    container.innerHTML += `
-      <div class="product">
-        <img src="${product.image}" alt="${product.name}">
-        <p><strong>${product.name}</strong><br>${product.price}</p>
-<button onclick="addToCart('Nike Air Max 270', 2499)">
-  Add to Cart
-</button>
-      </div>
-    `;
-  });
-}
