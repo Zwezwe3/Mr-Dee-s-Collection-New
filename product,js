@@ -1,27 +1,63 @@
-// Master product list
 const products = [
-  // Laptops
-  {name: "Lenovo ThinkPad Yoga", price: 15999, category: "laptops", image:"https://www.lenovo.com/medias/lenovo-laptop.jpg", specs:"Intel i7, 16GB RAM, 512GB SSD"},
-  {name: "HP Spectre x360", price: 18999, category: "laptops", image:"https://example.com/hp-spectre.jpg", specs:"Intel i7, 16GB RAM, 1TB SSD"},
-
   // Phones
-  {name: "iPhone 16 Pro Max", price: 39999, category: "phones", image:"https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Max.jpg", specs:"512GB, Silver"},
-  {name: "Samsung Galaxy Z Fold5", price: 35999, category: "phones", image:"https://example.com/galaxy-fold5.jpg", specs:"512GB, Phantom Black"},
+  {
+    name: "iPhone 16 Pro Max",
+    price: "R39,999",
+    category: "phones",
+    image: "images/iphone16pro.jpg",
+    specs: "512GB, Silver"
+  },
+  {
+    name: "Samsung Galaxy Z Fold5",
+    price: "R35,999",
+    category: "phones",
+    image: "images/galaxy-fold5.jpg",
+    specs: "512GB, Phantom Black"
+  },
 
   // Jeans
-  {name: "Diesel Jeans", price: 1999, category: "jeans", image:"images/jeans-diesel.jpg", specs:"Men's Sizes 30-38"},
-  {name: "Raw Jeans", price: 1499, category: "jeans", image:"images/jeans-raw.jpg", specs:"Men's Sizes 28-36"},
-  {name: "Replay Jeans", price: 1799, category: "jeans", image:"images/jeans-replay.jpg", specs:"Men's Sizes 30-38"},
-  {name: "G-Star Jeans", price: 1899, category: "jeans", image:"images/jeans-gstar.jpg", specs:"Men's Sizes 30-38"},
-  {name: "Ducati Jeans", price: 2199, category: "jeans", image:"images/jeans-ducati.jpg", specs:"Men's Sizes 30-38"},
+  {
+    name: "Diesel Jeans",
+    price: "R1,999",
+    category: "jeans",
+    image: "images/jeans-diesel.jpg",
+    specs: "Sizes 30–38"
+  },
+  {
+    name: "Replay Jeans",
+    price: "R1,799",
+    category: "jeans",
+    image: "images/jeans-replay.jpg",
+    specs: "Sizes 30–38"
+  },
+  {
+    name: "G-Star Jeans",
+    price: "R1,899",
+    category: "jeans",
+    image: "images/jeans-gstar.jpg",
+    specs: "Sizes 30–38"
+  },
 
   // Shoes
-  {name: "Nike Air Max 270", price: 2499, category: "shoes", image:"https://images.nike.com/is/image/DotCom/CW7306_101_A_PREM?align=0,1", specs:"Men's Sizes 6-12"},
-  {name: "Nike Revolution 6", price: 1799, category: "shoes", image:"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/317d23dc-1ed0-4049-b3e3-2cf40b5fc2e0/revolution-6-running-shoe.png", specs:"Men's Sizes 6-12"},
-  {name: "Adidas Ultraboost 22", price: 3199, category: "shoes", image:"images/sports-shoe-ultraboost22.jpg", specs:"Men's Sizes 6-12"},
-  {name: "Adidas NMD_R1", price: 2799, category: "shoes", image:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bd17f60b9f834d80b8faac7901536e3a_9366/NMD_R1_Shoes_White_GX0405_01_standard.jpg", specs:"Men's Sizes 6-12"},
-  {name: "Puma RS-X³", price: 1899, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/383200/01/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
-  {name: "Puma Future Rider", price: 1699, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/380869/02/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
-  {name: "Timberland 6 Inch Boots", price: 2999, category: "shoes", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", specs:"Premium, Waterproof"},
-  {name: "Timberland Classic Boot", price: 2800, category: "shoes", image:"images/Timberland.jpg", specs:"Men's Sizes 7-12"}
+  {
+    name: "Nike Air Max 270",
+    price: "R2,499",
+    category: "shoes",
+    image: "images/nike-airmax270.jpg",
+    specs: "Sizes 6–12"
+  },
+  {
+    name: "Adidas Ultraboost 22",
+    price: "R3,199",
+    category: "shoes",
+    image: "images/adidas-ultraboost22.jpg",
+    specs: "Sizes 6–12"
+  },
+  {
+    name: "Puma RS-X3",
+    price: "R1,899",
+    category: "shoes",
+    image: "images/puma-rsx3.jpg",
+    specs: "Sizes 6–12"
+  }
 ];
