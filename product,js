@@ -27,14 +27,14 @@ const products = [
     name: "Replay Jeans",
     price: "R1,799",
     category: "jeans",
-    image: "images/jeans-replay.jpg",
+    image: "images/491950339_1852484628905025_1160845635907717103_n.jpg",
     specs: "Sizes 30–38"
   },
   {
     name: "G-Star Jeans",
     price: "R1,899",
     category: "jeans",
-    image: "images/jeans-gstar.jpg",
+    image: "images/490731517_1852484292238392_3112171941870493245_n.jpg",
     specs: "Sizes 30–38"
   },
 
