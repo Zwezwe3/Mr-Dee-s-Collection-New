@@ -2,100 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Jeans</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeans – Mr Dee's Collection</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Mr Dee's Collection</h1>
-  <p>Quality Tech and Footwear</p>
-</header>
-
+<header class="banner"><h1>Mr Dee's Collection</h1></header>
 <nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="jeans.html">Jeans</a>
-  <a href="shoes.html">Shoes</a>
-  <a href="phones.html">Phones</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="products.html">All Products</a>
+<a href="phones.html">Phones</a>
+<a href="shoes.html">Shoes</a>
+<a href="jeans.html">Jeans</a>
 </nav>
 
-<main>
-  <h2 style="text-align:center;">Jeans Collection</h2>
-  <div class="products-grid" id="category-products"></div>
+<main class="container">
+<h2>Jeans</h2>
+<div id="products-container" class="products-grid"></div>
 </main>
-
-<!-- Modal -->
-<div class="modal" id="productModal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="modalImage" style="width:100%; border-radius:8px;">
-    <h3 id="modalName"></h3>
-    <p id="modalSpecs"></p>
-    <p id="modalPrice" class="price"></p>
-    <button class="add-cart-btn">Add to Cart</button>
-  </div>
-</div>
-
-<div id="miniCart">Cart: 0 items</div>
-<a href="https://wa.me/27628952301" target="_blank" class="whatsapp-btn">&#9993;</a>
 
 <script src="products.js"></script>
 <script>
-const CATEGORY = "jeans";
-const container = document.getElementById("category-products");
-let cart = [];
-
-function renderCategory() {
-  container.innerHTML = "";
-  products.filter(p => p.category === CATEGORY).forEach(product => {
-    const card = document.createElement("div");
-    card.className = "product";
-    card.innerHTML = `<img src="${product.image}" alt="${product.name}">
-                      <p><strong>${product.name}</strong><br>R${product.price}</p>`;
-    card.addEventListener("click", () => openModal(product));
-    container.appendChild(card);
-  });
-}
-
-const modal = document.getElementById("productModal");
-const modalImage = document.getElementById("modalImage");
-const modalName = document.getElementById("modalName");
-const modalSpecs = document.getElementById("modalSpecs");
-const modalPrice = document.getElementById("modalPrice");
-const closeModal = document.querySelector(".close");
-const addCartBtn = document.querySelector(".add-cart-btn");
-const miniCart = document.getElementById("miniCart");
-
-function openModal(product) {
-  modal.style.display = "flex";
-  modalImage.src = product.image;
-  modalName.textContent = product.name;
-  modalSpecs.textContent = product.specs;
-  modalPrice.textContent = "R" + product.price;
-  addCartBtn.onclick = () => {
-    cart.push(product);
-    updateCart();
-    modal.style.display = "none";
-  }
-}
-
-closeModal.onclick = () => modal.style.display = "none";
-window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
-
-function updateCart() {
-  miniCart.textContent = "Cart: " + cart.length + " item(s)";
-  miniCart.onclick = () => {
-    let msg = "Hello Mr Dee, I would like to order:\n";
-    cart.forEach((item,i) => msg += `${i+1}x ${item.name} - R${item.price}\n`);
-    window.open("https://wa.me/27628952301?text=" + encodeURIComponent(msg), "_blank");
-  }
-}
-
-renderCategory();
+const container = document.getElementById('products-container');
+products.filter(p => p.category === 'jeans')
+.forEach(p => {
+  const div = document.createElement('div');
+  div.className = 'product-card';
+  div.innerHTML = `
+    <img src="${p.image}" alt="${p.name}">
+    <h3>${p.name}</h3>
+    <p>${p.specs}</p>
+    <p class="price">R${p.price}</p>
+  `;
+  container.appendChild(div);
+});
 </script>
 
 </body>
