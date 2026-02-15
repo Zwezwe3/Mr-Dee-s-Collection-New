@@ -1,44 +1,14 @@
+
 const products = [
-  {
-    category: "laptops",
-    name: "Laptop 3",
-    description: "AMD Ryzen 5, 16GB RAM, 512GB SSD",
-    price: "R12,499",
-    image: "https://www.chavda.com/cdn/shop/files/UX3405CA_OU93210BL0X_1_0283.webp?v=1770320187"
-  },
-  {
-    category: "laptops",
-    name: "Laptop 4",
-    description: "ASUS Model",
-    price: "R11,999",
-    image: "https://www.becs.co.uk/wp-content/uploads/images/asus-laptop-KAt.jpeg"
-  },
-  {
-    category: "iphones",
-    name: "iPhone 14 Pro Max",
-    description: "Deep Purple",
-    price: "R22,999",
-    image: "https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg"
-  },
-  {
-    category: "iphones",
-    name: "iPhone 16 Pro",
-    description: "Natural Titanium",
-    price: "R34,499",
-    image: "https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp"
-  },
-  {
-    category: "shoes",
-    name: "Nike Sports Shoe",
-    description: "Comfort sports design",
-    price: "R1,999",
-    image: "https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg"
-  },
-  {
-    category: "shoes",
-    name: "Timberland Boots",
-    description: "Waterproof platform boots",
-    price: "R2,999",
-    image: "https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png"
-  }
+{ name:"Lenovo ThinkPad", price:15999, category:"laptops", image:"https://www.lenovo.com/medias/lenovo-laptop.jpg", specs:"Intel i7, 16GB RAM, 512GB SSD"},
+{ name:"HP Spectre x360", price:18999, category:"laptops", image:"https://via.placeholder.com/300x200?text=HP+Spectre", specs:"Intel i7, 16GB RAM, 1TB SSD"},
+
+{ name:"iPhone 14 Pro Max", price:22999, category:"phones", image:"https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg", specs:"256GB"},
+{ name:"iPhone 16 Pro", price:34499, category:"phones", image:"https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp", specs:"512GB"},
+
+{ name:"Nike Air Max", price:1999, category:"shoes", image:"https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg", specs:"Sizes 6–12"},
+{ name:"Timberland Boots", price:2999, category:"shoes", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", specs:"Waterproof"},
+
+{ name:"Diesel Jeans", price:1999, category:"jeans", image:"https://via.placeholder.com/300x200?text=Diesel+Jeans", specs:"Sizes 30–38"},
+{ name:"G-Star Jeans", price:1899, category:"jeans", image:"https://via.placeholder.com/300x200?text=G-Star+Jeans", specs:"Sizes 30–38"}
 ];
