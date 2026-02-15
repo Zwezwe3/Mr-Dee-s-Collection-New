@@ -27,9 +27,9 @@ const products = [
   {name:"Timberland 6 Inch Boots", price:"R2,999", specs:"Waterproof Premium Boots", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", category:"shoes"},
 
   // Jeans
-  {name:"Diesel Jeans", price:"R1,400", specs:"Premium Diesel Denim", image:"https://images.example.com/diesel.jpg", category:"jeans"},
-  {name:"Raw Jeans", price:"R1,300", specs:"Premium Raw Denim", image:"https://images.example.com/raw.jpg", category:"jeans"},
-  {name:"Replay Jeans", price:"R1,400", specs:"Premium Replay Denim", image:"https://images.example.com/replay.jpg", category:"jeans"},
-  {name:"G-Star Jeans", price:"R1,450", specs:"Premium G-Star Denim", image:"https://images.example.com/gstar.jpg", category:"jeans"},
-  {name:"Ducati Jeans", price:"R1,400", specs:"Premium Ducati Denim", image:"https://images.example.com/ducati.jpg", category:"jeans"}
+  {name:"Diesel Jeans", price:"R1,400", specs:"Premium Diesel Denim", image:"images/491736509_1852484418905046_8802287681723526745_n.jpg", category:"jeans"},
+  {name:"Raw Jeans", price:"R1,300", specs:"Premium Raw Denim", image:"images/490937915_1852484852238336_275008351211149739_n.jpg", category:"jeans"},
+  {name:"Replay Jeans", price:"R1,400", specs:"Premium Replay Denim", image:"images/491950339_1852484628905025_1160845635907717103_n.jpg", category:"jeans"},
+  {name:"G-Star Jeans", price:"R1,450", specs:"Premium G-Star Denim", image:"images/490937915_1852484852238336_275008351211149739_n.jpg", category:"jeans"},
+  {name:"Ducati Jeans", price:"R1,400", specs:"Premium Ducati Denim", image:"images/491406850_1852484725571682_588279870187893033_n.jpg", category:"jeans"}
 ];
