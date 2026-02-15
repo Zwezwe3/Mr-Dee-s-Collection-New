@@ -22,20 +22,6 @@ const products = [
   {name: "Adidas NMD_R1", price: 2799, category: "shoes", image:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bd17f60b9f834d80b8faac7901536e3a_9366/NMD_R1_Shoes_White_GX0405_01_standard.jpg", specs:"Men's Sizes 6-12"},
   {name: "Puma RS-X³", price: 1899, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/383200/01/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
   {name: "Puma Future Rider", price: 1699, category: "shoes", image:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/380869/02/fnd/EEA/fmt/png", specs:"Men's Sizes 6-12"},
-  {name: "Timberland 6 Inch Boots", price: 2999, category: "shoes", image:"images/timberland-6inch.jpg", specs:"Waterproof, Men's Sizes 6-12"}
+  {name: "Timberland 6 Inch Boots", price: 2999, category: "shoes", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", specs:"Premium, Waterproof"},
+  {name: "Timberland Classic Boot", price: 2800, category: "shoes", image:"images/Timberland.jpg", specs:"Men's Sizes 7-12"}
 ];
-
-// Helper function to create product cards dynamically
-function createProductCard(product, container) {
-  const card = document.createElement("div");
-  card.className = "product";
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <p><strong>${product.name}</strong><br>R${product.price}</p>
-  `;
-  card.addEventListener("click", () => {
-    localStorage.setItem("selectedProduct", JSON.stringify(product));
-    window.location.href = "product-details.html"; // Optional: open product modal/details page
-  });
-  container.appendChild(card);
-}
