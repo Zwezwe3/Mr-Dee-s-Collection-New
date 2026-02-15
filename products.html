@@ -2,72 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>All Products</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All Products - Mr Dee's Collection</title>
-
-<style>
-body {font-family:Arial; margin:0; background:#f6f6f6;}
-
-.banner {
-  background:#004080;
-  color:#fff;
-  text-align:center;
-  padding:25px;
-  font-size:1.6em;
-  font-weight:bold;
-}
-
-nav {
-  background:#000;
-  padding:10px;
-  text-align:center;
-}
-nav a {
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-}
-
-.products-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  padding:20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.product {
-  background:#fff;
-  padding:10px;
-  border-radius:8px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  text-align:center;
-}
-.product img {width:100%; border-radius:6px;}
-.price {color:#004080; font-weight:bold;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="banner">Mr Dee's Collection</div>
+<header class="banner">
+  <h1>Mr Dee's Collection</h1>
+</header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="products.html">All</a>
+  <a href="products.html">All Products</a>
+  <a href="laptops.html">Laptops</a>
   <a href="phones.html">Phones</a>
   <a href="shoes.html">Shoes</a>
   <a href="jeans.html">Jeans</a>
+  <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="products-grid" id="products-container"></div>
+<main class="container">
+  <h2>All Products</h2>
+  <div id="products-container" class="products-grid"></div>
+</main>
 
 <script src="products.js"></script>
-<script src="products-loader.js"></script>
 <script>
-loadProducts("all");
+const container = document.getElementById('products-container');
+
+products.forEach(p => {
+  const div = document.createElement('div');
+  div.className = 'product-card';
+  div.innerHTML = `
+    <img src="${p.image}" alt="${p.name}">
+    <h3>${p.name}</h3>
+    <p>${p.specs}</p>
+    <p class="price">R${p.price}</p>
+    <a class="buy-btn" href="https://wa.me/27628952301?text=Hi,%20I%20want%20${encodeURIComponent(p.name)}">
+      Order on WhatsApp
+    </a>
+  `;
+  container.appendChild(div);
+});
 </script>
 
 </body>
