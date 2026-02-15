@@ -1,14 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-const products = [
-{ name:"Lenovo ThinkPad", price:15999, category:"laptops", image:"https://www.lenovo.com/medias/lenovo-laptop.jpg", specs:"Intel i7, 16GB RAM, 512GB SSD"},
-{ name:"HP Spectre x360", price:18999, category:"laptops", image:"https://via.placeholder.com/300x200?text=HP+Spectre", specs:"Intel i7, 16GB RAM, 1TB SSD"},
+<header class="banner">
+  <h1>Mr Dee's Collection</h1>
+</header>
 
-{ name:"iPhone 14 Pro Max", price:22999, category:"phones", image:"https://fones.co.za/wp-content/uploads/2025/03/iphone_14_pro_max_deep_purple-6_1.jpg", specs:"256GB"},
-{ name:"iPhone 16 Pro", price:34499, category:"phones", image:"https://fones.co.za/wp-content/uploads/2025/11/Apple-iPhone-16-Pro-Natural-Titanium-2.webp", specs:"512GB"},
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">All Products</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="phones.html">Phones</a>
+  <a href="shoes.html">Shoes</a>
+  <a href="jeans.html">Jeans</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-{ name:"Nike Air Max", price:1999, category:"shoes", image:"https://images.pexels.com/photos/6481918/pexels-photo-6481918.jpeg", specs:"Sizes 6–12"},
-{ name:"Timberland Boots", price:2999, category:"shoes", image:"https://assets.timberland.com/images/t_img/f_auto,h_340,e_sharpen:60,w_340/dpr_2.0/v1719373599/TB1A5RJD231-ALT4/Womens-Stone-Street-6Inch-Waterproof-Platform-Boot.png", specs:"Waterproof"},
+<main class="container">
+  <h2>All Products</h2>
+  <div id="products-container" class="products-grid"></div>
+</main>
 
-{ name:"Diesel Jeans", price:1999, category:"jeans", image:"https://via.placeholder.com/300x200?text=Diesel+Jeans", specs:"Sizes 30–38"},
-{ name:"G-Star Jeans", price:1899, category:"jeans", image:"https://via.placeholder.com/300x200?text=G-Star+Jeans", specs:"Sizes 30–38"}
-];
+<script src="products.js"></script>
+<script>
+const container = document.getElementById('products-container');
+
+products.forEach(p => {
+  const div = document.createElement('div');
+  div.className = 'product-card';
+  div.innerHTML = `
+    <img src="${p.image}" alt="${p.name}">
+    <h3>${p.name}</h3>
+    <p>${p.specs}</p>
+    <p class="price">R${p.price}</p>
+    <a class="buy-btn" href="https://wa.me/27628952301?text=Hi,%20I%20want%20${encodeURIComponent(p.name)}">
+      Order on WhatsApp
+    </a>
+  `;
+  container.appendChild(div);
+});
+</script>
+
+</body>
+</html>
